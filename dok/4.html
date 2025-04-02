@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>wep-шпаргалка</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="../css/style.min.css?_v=20241216071557">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- Подключаем Prism.js -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css?_v=20241216071557" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css?_v=20241216071557" rel="stylesheet" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="het-men">
+					<a href="../index.html" class="header__logo"><img src="../img/logo.webp" width="50px" alt="logo"></a>
+					<article class="search">
+						<div class="icon"></div>
+						<form action="#" method="get" enctype="multipart/form-data" class="search__form">
+							<input type="text" id="searchInput" type="search" class="search__input" placeholder="Пошук">
+							<div id="searchResults"></div>
+						</form>
+						<!-- <input type="text" id="searchInput" placeholder="Введіть ваш запит...">
+				<div id="searchResults"></div> -->
+					</article>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="../html.html" class="menu__link">HTML</a></li>
+								<li class="menu__item"><a href="../css.html" class="menu__link">CSS</a></li>
+								<li class="menu__item"><a href="../scss.html" class="menu__link">SCSS</a></li>
+								<li class="menu__item"><a href="../JavaScript.html" class="menu__link">JavaScript</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">WordpRess</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">GIT</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="main__catalog catalog">
+				<div class="catalog__container">
+					<div data-spollers class="spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title">МЕНЮ</summary>
+							<div class="spollers__body">
+								<form class="filter__body">
+									<div class="filter__section section-filter">
+										<div class="section-filter__body">
+											<nav class="section-filter__menu menu-filter">
+												<ul class="menu-filter__list">
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="documentation.html">Сборщик проектов Gulp 4</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="videolessons.html">Видео уроки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Роботи верски сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Пример кода</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Заготовки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">названия классов HTML/CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка адаптивности</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Grid CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Flexbox CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Верстка сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Претпроцесор SCSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Tailwind CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Курс по Frontend разработке</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</form>
+							</div>
+						</details>
+					</div>
+					<!-- ========================================= -->
+					<div class="catalog__body">
+						<div class="catalog__header">
+							<h1 class="catalog__title">Робота зі шрифтами. Локальні та іконочні шрифти. Підключення з Google Fonts
+							</h1>
+						</div>
+
+						<div class="catalog__text">
+							<p>
+								У стартовому шаблоні “Чертоги Фрілансера” v3.0.0 (далі – ЧФ) весь процес підключення локальних та іконочних шрифтів
+								максимально автоматизований. Вихідні файли шрифтів конвертуються з сучасних форматів .WOFF і .WOFF2, а також виконується
+								запис підключення шрифтів у файл стилів, включаючи значення font-weight на основі імені файлу.
+							</p>
+							<h2>Як ЧФ обробляє шрифти?</h2>
+							<p>
+								При запуску шаблону в будь-якому режимі, ЧФ перевірить, чи є файли шрифтів у форматах .TTF та/або .OTF у папці
+								src/fonts.
+							</p>
+							<p>Далі відбувається три етапи конвертації:</p>
+							<p>
+								&#128073; Файли .OTF (якщо вони є) конвертуються у .TTF і зберігаються у папці з вихідними файлами src/fonts. <br> <br>
+								&#128073; Файли .TTF конвертуються у .WOFF і записуються у папку з результатом (dist/fonts) <br> <br>
+								&#128073; Файли .TTF конвертуються у .WOFF2 і записуються у папку з результатом (dist/fonts) <br> <br>
+							</p>
+							<p>
+								Після конвертації ЧФ перевірить наявність файлу стилів scss/fonts/fonts.scss і, <span>якщо його немає</span>, запише в нього
+								конструкції @font-face для всіх файлів, включаючи значення font-weight, засноване на імені файлу.
+							</p>
+							<p>
+								&#9757; Якщо файл scss/fonts/fonts.scss існує, дані не перезапишуться. Це зроблено для того, якщо нам доведеться внести зміни до
+								файлу scss/fonts/fonts.scss після роботи ЧФ, ці зміни не затерлися.
+							</p>
+							<p>
+								<span>У яких випадках нам потрібно внести зміни до файлу scss/fonts/fonts.scss вручну?</span> Справа в тому, що значення font-weight
+								ґрунтується на імені файлу шрифту, тобто якщо файли називається Roboto-bold, то значення font-weight буде 700. Але якщо
+								файл буде названий без відділення, наприклад RobotoBold, то адекватне визначення не вдасться і буде записано значення за
+								замовчанням (400). І ось у цих випадках нам необхідно відредагувати файл, вказавши адекватні значення.
+							</p>
+							<p>
+								&#9757;Якщо ми хочемо перезаписати дані у файлі <span>scss/fonts/fonts.scss</span>, нам слід його видалити та перезапустити систему, або
+								запустити команду <span>npm run fonts</span> (система сама видалить файл та створить новий)
+							</p>
+							<h2>Як підключити локальні файли шрифтів:</h2>
+							<p>
+								&#128073; Завантажити або отримати від дизайнера/замовника файли шрифтів у форматі .TTF та/або .OTF і покласти їх у папку
+								<span>src/fonts (якщо папки немає – створити)</span> <br> <br>
+								&#128073; Розкоментувати підключення файлу <span>fonts.scss (рядок fonts/fonts)</span> у файлі <span>scss/style.scss</span> <br> <br>
+								&#128073; Вказати сімейство шрифту за замовчуванням у змінній <span>$fontFamily</span> у файлі <span>scss/style.scss</span> <br> <br>
+								&#128073; Запустити ЧФ у будь-якому режимі <br> <br>
+							</p>
+							<p>
+								При необхідності, ви можете відредагувати створений та заповнений файл <span>scss/fonts/fonts.scss</span>
+								При необхідності перестворити дані у файлі стилів <span>scss/fonts/fonts.scss</span> повністю, слід його видалити та перезапустити
+								систему, або запустити команду <span>npm run fonts</span> (система сама видаляє файл та створить новий)
+							</p>
+							<p>
+								Як підключити локальні файли іконочних шрифтів:
+							</p>
+							<p>
+								&#128073; Тим чи іншим способом створити файл іконочного шрифту у форматі .TTF та/або .OTF і покласти його у папку <span>src/fonts</span>
+								(розробляється робота над автоматизацією цього процесу) <br> <br>
+								&#128073; Відредагувати файл <span>scss/fonts/icons.scss</span> внісши класи для іконок, а також переконатися, що ім’я шрифту (font-family) для
+								SCSS-шаблону <span>%ic {}</span> збігається з тим, що вказано у файлі <span>scss/fonts/fonts.scss</span> <br> <br>
+								&#128073; Розкоментувати підключення файлу <span>icons.scss (рядок fonts/icons)</span> у файлі <span>scss/style.scss</span> <br> <br>
+								&#128073; Запустити ЧФ у будь-якому режимі <br> <br>
+							</p>
+							<h2>Як підключити шрифти з Google Fonts:</h2>
+							<p>Найпростіший спосіб – це скористатися плагіном для VS Code <span>Google Fonts</span></p>
+							<p>
+								&#128073; Натискаємо F1 і шукаємо плагін Google Fonts <br> <br>
+								&#128073; Якщо хочемо підключити шрифт окремим тегом link у HTML файл, вибираємо <span>Google Fonts: insert
+									link</span> <br> <br>
+								&#128073; Якщо хочемо підключити шрифт до файлу стилів (зазвичай це <span>scss/style.scss</span>), вибираємо <span>Google Fonts: insert CSS @import</span> <br> <br>
+								&#128073; Зі списку вибираємо потрібний шрифт, можна скористатися пошуком <br> <br>
+								&#128073; Після вставки рядка підключення слід відредагувати рядок, залишивши тільки потрібні накреслення шрифту <br> <br>
+								&#128073; Також слід додати до рядка підключення <span>&display=swap</span> <br> <br>
+							</p>
+							<p>Приклад підключення шрифту Montserrat:</p>
+							<pre class="wp-block-code"><code class="xml"><span class="tag"><span class="title">@import</span> <span class="attribute">url</span><span class="value">(https://fonts.googleapis.com/css?family=Montserrat:400,500,800&display=swap);</span> <span class="attribute"></span><span class="value"></span></span></code>
+							</pre>
+							<p>
+								Шрифти, підключені з Google Fonts, не повинні потрапляти в папку з результатом (dist), вони підвантажуються з сервера
+								Google.
+							</p>
+							<p>
+								Також варто зазначити, що отримати рядок для підключення шрифту ви можете і без плагіна на сайті <span><a href="https://fonts.google.com/">Google Fonts</a></span>.
+							</p>
+						</div>
+
+					</div>
+					<!-- ========================================= -->
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20241216071557"></script>
+	<script src="js/1.js?_v=20241216071557"></script>
+	<script src="js/2.js?_v=20241216071557"></script>
+	<script src="js/3.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js?_v=20241216071557"></script>
+</body>
+
+</html>

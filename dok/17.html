@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>wep-шпаргалка</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="../css/style.min.css?_v=20241216071557">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- Подключаем Prism.js -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css?_v=20241216071557" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css?_v=20241216071557" rel="stylesheet" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="het-men">
+					<a href="../index.html" class="header__logo"><img src="../img/logo.webp" width="50px" alt="logo"></a>
+					<article class="search">
+						<div class="icon"></div>
+						<form action="#" method="get" enctype="multipart/form-data" class="search__form">
+							<input type="text" id="searchInput" type="search" class="search__input" placeholder="Пошук">
+							<div id="searchResults"></div>
+						</form>
+						<!-- <input type="text" id="searchInput" placeholder="Введіть ваш запит...">
+				<div id="searchResults"></div> -->
+					</article>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="../html.html" class="menu__link">HTML</a></li>
+								<li class="menu__item"><a href="../css.html" class="menu__link">CSS</a></li>
+								<li class="menu__item"><a href="../scss.html" class="menu__link">SCSS</a></li>
+								<li class="menu__item"><a href="../JavaScript.html" class="menu__link">JavaScript</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">WordpRess</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">GIT</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="main__catalog catalog">
+				<div class="catalog__container">
+					<div data-spollers class="spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title">МЕНЮ</summary>
+							<div class="spollers__body">
+								<form class="filter__body">
+									<div class="filter__section section-filter">
+										<div class="section-filter__body">
+											<nav class="section-filter__menu menu-filter">
+												<ul class="menu-filter__list">
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="documentation.html">Сборщик проектов Gulp 4</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="videolessons.html">Видео уроки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Роботи верски сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Пример кода</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Заготовки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">названия классов HTML/CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка адаптивности</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Grid CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Flexbox CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Верстка сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Претпроцесор SCSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Tailwind CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Курс по Frontend разработке</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</form>
+							</div>
+						</details>
+					</div>
+					<!-- ========================================= -->
+					<div class="catalog__body">
+						<div class="catalog__header">
+							<h1 class="catalog__title">Модуль “Спойлери”</h1>
+						</div>
+
+						<div class="catalog__text">
+							<p>
+								Спойлер – це заголовок, при натисканні на який під ним розгортається певний контент.
+							</p>
+							<h2>Основні можливості</h2>
+							<p>
+								&#9989; Використання безлічі блоків зі спойлерами <br> <br>
+								&#9989; Вимкнення/увімкнення функціоналу на певній ширині екрану <br> <br>
+								&#9989; Функція “акордеон”, коли в блоці може бути відкритий лише один спойлер <br> <br>
+								&#9989; Можливість закриття по кліку за межами спойлера <br> <br>
+								&#9989; Можливість анімованого відкриття <br> <br>
+								&#9989; Семантика та доступність <br> <br>
+							</p>
+							<h2>Підключення функціоналу</h2>
+							<p>
+								<span>[HTML]</span> У потрібному місці викликати <span>сніпет spollers</span> (класи можна замінити на потрібні). Або вручну створити структуру із
+								відповідними дата-атрибутами. Зауважте, що додавання атрибуту <span>data-open</span> для елемента <span>details</span> зробить спойлер активним (відкритим).
+							</p>
+							<p><span>Приклад блоку з двома спойлерами:</span></p>
+							<div class="m">
+								<p><code>
+										<span class="b">&#8249;div data-spollers class="spollers"&#8250;</span> <br>
+										<span class="b">&#8249;details class="spollers__item"&#8250;</span> <br>
+										<span class="b">&#8249;summary class="spollers__title"&#8250;</span> <br>
+										Заголовок спойлера №1 <br>
+										<span>&#8249;/summary&#8250;</span> <br>
+										<span class="f">&#8249;div class="spollers__body"&#8250;</span> Контент спойлера №1 <span class="h">&#8249;/div&#8250;</span> <br>
+										<span>&#8249;/details&#8250;</span> <br>
+										<span class="b">&#8249;details class="spollers__item"&#8250;</span> <br>
+										<span class="b">&#8249;summary class="spollers__title"&#8250;</span> <br>
+										Заголовок спойлера №2 <br>
+										<span>&#8249;/summary&#8250;</span> <br>
+										<span class="f">&#8249;div class="spollers__body"&#8250;</span> Контент спойлера №2 <span class="h">&#8249;/div&#8250;</span> <br>
+										<span>&#8249;/details&#8250;</span> <br>
+									</code></p>
+							</div>
+							<p>
+								<span>[JS]</span> У файлі <span>js/app.js</span> розкоментувати рядок <span>flsFunctions.spollers()</span>;
+								<span>[SCSS]</span> (не обов’язково) Якщо ви хочете одразу подивитися на роботу спойлерів та залишили класи запропоновані сніпетом,
+								ви можете розкоментувати рядок <span>@import «base/spollers»</span>; у файлі <span>src/scss/base.scss</span> це підключить базові стилі, їх можна
+								відредагувати під свої потреби.
+							</p>
+							<p>
+								&#9989; Прибрати <span>стандартний маркер</span> елементу summary
+								можна за допомогою css-параметру <span>list-style: none</span>;
+							</p>
+							<p>
+								У момент ініціалізації (увімкнення) функціонала спойлера контент буде прихований, а до елемента з атрибутом
+								<span>data-spollers</span> буде додано клас <span>_spoller-init</span>
+							</p>
+							<h2>Використання функціоналу</h2>
+							<p>
+								<span>Вимкнення/увімкнення функціоналу на певній ширині екрану</span>
+							</p>
+							<p>
+								Для того, щоб вимкнути/включити функціонал спойлера на певній ширині екрана, необхідно для атрибуту <span>data-spollers</span> через
+								кому вказати потрібну ширину екрану а також тип:
+							</p>
+							<p>
+								&#9989; <span>max</span> (за замовчуванням) — функціонал увімкнеться на ширині меншій за вказану <br> <br>
+								&#9989; <span>min</span> — функціонал увімкнеться на ширині більшій ніж зазначена <br> <br>
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="b">&#8249;div data-spollers="768,min" class="spollers"&#8250;</span> <br>
+										...... <br> <br>
+										<span>&#8249;/div&#8250;</span>
+									</code></p>
+							</div>
+							<br>
+							<h2>Увімкнення режиму “акордеон”</h2>
+							<p>
+								Для того, щоб увімкнути режим акордеон, необхідно для елемента з атрибутом <span>data-spollers</span> додати атрибут <span>data-one-spoller</span>
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="b">&#8249;div data-spollers data-one-spoller class="spollers"&#8250;</span> <br>
+										...... <br> <br>
+										<span>&#8249;/div&#8250;</span>
+									</code></p>
+							</div>
+							<p>
+								Тепер, при відкритті спойлера, інший відкритий спойлер у блоці закриватиметься
+							</p>
+							<h2>Управління швидкістю анімації</h2>
+							<p>
+								Для того, щоб керувати часом анімації відкриття/закриття спойлера, необхідно для елемента з атрибутом <span>data-spollers</span>
+								додати атрибут <span>data-spollers-speed</span>, а в якості значення вказати час анімації в мілісекундах (за замовчуванням 500).
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="b">&#8249;div data-spollers data-spollers-speed="1000" class="spollers"&#8250;</span> <br>
+										...... <br> <br>
+										<span>&#8249;/div&#8250;</span>
+									</code></p>
+							</div>
+							<br>
+							<h2>Закриття при кліку поза спойлером</h2>
+							<p>
+								Якщо необхідно закривати спойлер(и) при кліку поза блоком (“на порожньому місці”), слід додати потрібному заголовку(кам)
+								атрибут <span>data-spoller-close</span>
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="b">&#8249;div data-spollers class="spollers"&#8250;</span> <br>
+										<span class="b">&#8249;details class="spollers__item"&#8250;</span> <br>
+										<span class="b">&#8249;summary data-spoller-close class="spollers__title"&#8250;</span> Заголовок спойлера <span>&#8249;/summary&#8250;</span> <br>
+										<span class="b">&#8249;div class="spollers__body"&#8250;</span> Контент спойлера <span>&#8249;/div&#8250;</span> <br>
+										<span>&#8249;/details&#8250;</span> <br>
+										<span>&#8249;/div&#8250;</span>
+									</code></p>
+							</div>
+							<br>
+							<h2>Прокрутка до заголовку</h2>
+							<p>
+								Якщо необхідно прокрутити скрол до заголовку відкритого спойлеру, слід додати потрібному елементу (тег details) атрибут
+								<span>data-spoller-scroll</span>
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="b">&#8249;div data-spollers class="spollers"&#8250;</span> <br>
+										<span class="b">&#8249;details data-spoller-scroll class="spollers__item&#8250;</span> <br>
+										<span class="b">&#8249;summary class="spollers__title"&#8250;</span> Заголовок спойлера <span>&#8249;/summary&#8250;</span> <br>
+										<span class="b">&#8249;div class="spollers__body"&#8250;</span> Контент спойлера <span>&#8249;/div&#8250;</span> <br>
+										<span>&#8249;/details&#8250;</span> <br>
+										<span>&#8249;/div&#8250;</span>
+									</code></p>
+							</div>
+							<p>
+								Є можливість більш тонких налаштувань. Наприклад, якщо треба щоб скрол враховув шапку сайту (коли вона фіксована), то
+								варто додати атрибут <span>data-spoller-scroll-noheader</span>.
+							</p>
+							<p>
+								Також, в самому атрибуті <span>data-spoller-scroll</span> можна дописати числове значення яке буде враховане при скролі:
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="b">&#8249;div data-spollers class="spollers"&#8250;</span> <br>
+										<span class="b">&#8249;details data-spoller-scroll="20" data-spoller-scroll-noheader class="spollers__item"&#8250;</span> <br>
+										<span class="b">&#8249;summary class="spollers__title"&#8250;</span> Заголовок спойлера <span>&#8249;/summary&#8250;</span> <br>
+										<span class="b">&#8249;div class="spollers__body"&#8250;</span> Контент спойлера <span>&#8249;/div&#8250;</span> <br>
+										<span>&#8249;/details&#8250;</span> <br>
+										<span>&#8249;/div&#8250;</span>
+									</code></p>
+							</div>
+							<br>
+							<h2>Розташування та додаткові дані</h2>
+							<p>Функціонал знаходиться у <span>js/files/functions.js.</span> Назва функціі <span>spollers()</span></p>
+							<h2>Додаткові матеріали</h2>
+							<br>
+							<div class="modal">
+								<div class="modal-content">
+									<iframe src="https://www.youtube.com/embed/0fg9bZcL1RM?si=thta0oxV2wNay6hH" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- ========================================= -->
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20241216071557"></script>
+	<script src="js/1.js?_v=20241216071557"></script>
+	<script src="js/2.js?_v=20241216071557"></script>
+	<script src="js/3.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js?_v=20241216071557"></script>
+</body>
+
+</html>

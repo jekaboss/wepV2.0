@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>wep-шпаргалка</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="../css/style.min.css?_v=20241216071557">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- Подключаем Prism.js -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css?_v=20241216071557" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css?_v=20241216071557" rel="stylesheet" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="het-men">
+					<a href="../index.html" class="header__logo"><img src="../img/logo.webp" width="50px" alt="logo"></a>
+					<article class="search">
+						<div class="icon"></div>
+						<form action="#" method="get" enctype="multipart/form-data" class="search__form">
+							<input type="text" id="searchInput" type="search" class="search__input" placeholder="Пошук">
+							<div id="searchResults"></div>
+						</form>
+						<!-- <input type="text" id="searchInput" placeholder="Введіть ваш запит...">
+				<div id="searchResults"></div> -->
+					</article>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="../html.html" class="menu__link">HTML</a></li>
+								<li class="menu__item"><a href="../css.html" class="menu__link">CSS</a></li>
+								<li class="menu__item"><a href="../scss.html" class="menu__link">SCSS</a></li>
+								<li class="menu__item"><a href="../JavaScript.html" class="menu__link">JavaScript</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">WordpRess</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">GIT</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="main__catalog catalog">
+				<div class="catalog__container">
+					<div data-spollers class="spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title">МЕНЮ</summary>
+							<div class="spollers__body">
+								<form class="filter__body">
+									<div class="filter__section section-filter">
+										<div class="section-filter__body">
+											<nav class="section-filter__menu menu-filter">
+												<ul class="menu-filter__list">
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="documentation.html">Сборщик проектов Gulp 4</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="videolessons.html">Видео уроки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Роботи верски сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Пример кода</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Заготовки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">названия классов HTML/CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка адаптивности</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Grid CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Flexbox CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Верстка сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Претпроцесор SCSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Tailwind CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Курс по Frontend разработке</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</form>
+							</div>
+						</details>
+					</div>
+					<!-- ========================================= -->
+					<div class="catalog__body">
+						<div class="catalog__header">
+							<h1 class="catalog__title">SCSS-Міксин “Чуйна (адаптивна) властивість”</h1>
+						</div>
+
+						<div class="catalog__text">
+							<p>
+								За допомогою SCSS-міксину “Чуйна (адаптивна) властивість” можна чутливо (в залежності від ширини екрану) змінювати
+								значення тієї чи іншої CSS-властивості від початкового значення, на певній ширині екрана, до кінцевого значення на іншій
+								ширині екрану. Можна вказувати довільні проміжки ширини. Також існує кілька режимів поведінки міксину поза вказаними
+								проміжками.
+							</p>
+							<p>
+								&#9757; Міксин представлений у двох реалізаціях – clamp() та calc(). Сlamp працює швидше, але якщо виникають проблеми з
+								підтримкою браузерами, міксин автоматично переключиться на calc().
+								<br> <br>
+								Примусово використовувати calc() можна змінивши код міксину у файлі scss/base/mixins.scss
+							</p>
+							<h2>Використання міксину</h2>
+							<p>Щоб працювати з міксином потрібно в SCSS селекторі викликати сніпет <span>av:</span> </p>
+							<p>Базовий режим роботи міксину:</p>
+							<div class="m">
+								<p><code>
+										<span class="b">@include adaptiveValue("властивість", початкове значення, кінцеве значення);</span> <br>
+									</code></p>
+							</div>
+							<p>Де:</p>
+							<p>
+								<span>Властивість</span> – CSS-властивість, значення якого необхідно адаптувати. Можна вказати будь-яку властивість, значення якого вказується у цифрах.
+							</p>
+							<p>
+								<span>Початкове значення</span> – стартове значення властивості в пікселях, пишемо число без px. Зазвичай вказується по макету.
+							</p>
+							<p>
+								<span>Кінцеве значення</span> – фінальне значення властивості в пікселях, пишемо число без px. Значення, до якого ми хочемо прийти на
+								менших ширинах екрану.
+							</p>
+							<p>Приклади:</p>
+							<div class="m">
+								<p><code>
+										<span class="b">@include adaptiveValue("font-size", 50, 20);</span> <br>
+										<span class="b">@include adaptiveValue("padding-top", 80, 10);</span> <br>
+										...
+									</code></p>
+							</div>
+							<h2>Алгоритм работы миксина</h2>
+							<p>
+								Міксин працює на основі значень змінних <span>$minWidth, $maxWidth, $maxWidthContainer, $containerPadding</span> и <span>$containerWidth</span>
+								розташованих у блоці <span>“Налаштування адаптивної сітки”</span> файлу <span>scss/style.scss</span>
+							</p>
+							<p>
+								Упідсумку, за замовчанням, міксин працюватиме так:
+							</p>
+							<p>
+								Якщо <span>$maxWidthContainer</span> більше нуля, то значення властивості змінюватимуться в проміжку ширин від <span>$containerWidth</span> до <span>$minWidth</span>. Тобто, по всій ширині контейнера, що обмежує.
+							</p>
+							<p>
+								При цьому, якщо ширина екрана більша ніж <span>$containerWidth</span>, то значення властивості дорівнюватиме
+								<span>початковому</span> значенню.
+								Якщо ширина екрана менша ніж <span>$minWidth</span>, то значення властивості дорівнюватиме <span>кінцевому
+									значенню</span>.
+							</p>
+							<p>
+								Якщо <span>$maxWidthContainer</span> дорівнює нулю, то значення властивості змінюватимуться в проміжку ширин від <span>$maxWidth</span> до <span>$minWidth.</span>
+							</p>
+							<h2>Додаткові налаштування та режими роботи</h2>
+							<p><span>Режими роботи</span></p>
+							<p>Поведінку міксину ми можемо налаштувати вказавши режим роботи.</p>
+							<div class="m">
+								<p><code>
+										<span class="b">@include adaptiveValue("властивість", початкове значення, кінцеве значення, режим роботи);</span> <br>
+									</code></p>
+							</div>
+							<p>
+								<span>Режим роботи</span>– може приймати числові значення <span>0 / не вказано , 1, 2</span> або <span>3</span>:
+							</p>
+							<p>
+								<span>0 / не вказано</span> – Якщо ширина екрану більше ніж <span>ширина від</span>, то значення властивості дорівнює <span>початковому значенню</span>. Якщо
+								ширина екрану менше ніж <span>ширина до</span>, то значення властивості дорівнюватиме <span>кінцевому значенню</span>.
+							</p>
+							<p>
+								<span>1</span> – Міксин буде працювати <span>тільки</span> між <span>мінімальною</span> та <span>максимальною</span> шириною екрану, <span>або тільки у зазначених проміжках</span> якщо
+								вони задані (про проміжки дивись далі). За цих ширин, значення властивості будуть за замовчюванням або успадковуватися
+								від предків.
+							</p>
+							<p>
+								<span>2</span> – Якщо ширина екрана більше ніж <span>ширина від</span>, то значення властивості дорівнює <span>початковому</span>значенню. Якщо ширина екрану
+								менше ніж <span>ширина до</span>, значення властивості буде за замовчуванням або успадковуватися від предків.
+							</p>
+							<p>
+								<span>3</span> – Якщо ширина екрана більше ніж <span>ширина від</span>, то значення властивості буде за замовчуванням або успадковуватися від
+								предків. Якщо ширина екрана менше ніж <span>ширина до</span>, то значення властивості дорівнюватиме <span>кінцевому значенню</span>.
+							</p>
+							<p><span>Приклад:</span></p>
+							<div class="m">
+								<p><code>
+										<span class="b">@include adaptiveValue("font-size", 50, 20, 1);</span> <br>
+									</code></p>
+							</div>
+							<br> <br>
+							<h2>Власні проміжки</h2>
+							<p>
+								Міксин дозволяє вказати свій проміжок ширини всередині якого адаптуватиметься значення властивості.
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="b">@include adaptiveValue("властивість", початкове значення, кінцеве значення, режим роботи, ширина від, ширина до);</span> <br>
+									</code></p>
+							</div>
+							<p>
+								<span>ширина від</span> – стартова ширина менше за яку почнеться адаптація, пишемо число без px.
+							</p>
+							<p>
+								<span>ширина до</span> – кінцева ширина до якої буде адаптуватися значення властивості, пишемо число без px.
+							</p>
+							<p>
+								&#9757; <span>Увага!</span>
+								При вказанні проміжків необхідно обов’язково вказати режим роботи
+							</p>
+							<p><span>Приклад:</span></p>
+							<div class="m">
+								<p><code>
+										<span class="b">@include adaptiveValue("font-size", 50, 20, 0, 800, 480);</span> <br>
+									</code></p>
+							</div>
+							<p>Також ми можемо використовувати кілька міксинових викликів з різними проміжками:</p>
+							<div class="m">
+								<p><code>
+										<span class="b">@include adaptiveValue("font-size", 50, 20, 2, 800, 480);</span> <br>
+										<span class="b">@include adaptiveValue("font-size", 20, 10, 3, 480);</span>
+									</code></p>
+							</div>
+							<p>
+								У прикладі станеться таке: у проміжку ширин екрану від 800px до 480px значення властивості font-size буде чуйно
+								адаптуватися від 50px до 20px, а в проміжку від 480px до 320px чуйно адаптуватися від 20px до 10px. Ширше 800px значення
+								властивості буде 50px, вже 320px значення властивості буде 20px.
+							</p>
+							<p>
+								&#9757;<span>Увага!</span> Не використовуйте додаткові медіа-запити для роботи з чуйною властивістю. Все, що вам потрібно, можна налаштувати
+								за допомогою комбінацій кількості адаптивних властивостей, режимів і проміжків.
+							</p>
+							<h2>Розташування</h2>
+							<p>
+								Міксін <span>adaptiveValue</span> знаходиться у файлі <span>scss/base/mixins.scss</span>
+							</p>
+						</div>
+
+					</div>
+					<!-- ========================================= -->
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20241216071557"></script>
+	<script src="js/1.js?_v=20241216071557"></script>
+	<script src="js/2.js?_v=20241216071557"></script>
+	<script src="js/3.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js?_v=20241216071557"></script>
+</body>
+
+</html>

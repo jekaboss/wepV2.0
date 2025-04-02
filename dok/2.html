@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>wep-шпаргалка</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="../css/style.min.css?_v=20241216071557">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- Подключаем Prism.js -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css?_v=20241216071557" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css?_v=20241216071557" rel="stylesheet" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="het-men">
+					<a href="../index.html" class="header__logo"><img src="../img/logo.webp" width="50px" alt="logo"></a>
+					<article class="search">
+						<div class="icon"></div>
+						<form action="#" method="get" enctype="multipart/form-data" class="search__form">
+							<input type="text" id="searchInput" type="search" class="search__input" placeholder="Пошук">
+							<div id="searchResults"></div>
+						</form>
+						<!-- <input type="text" id="searchInput" placeholder="Введіть ваш запит...">
+				<div id="searchResults"></div> -->
+					</article>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="../html.html" class="menu__link">HTML</a></li>
+								<li class="menu__item"><a href="../css.html" class="menu__link">CSS</a></li>
+								<li class="menu__item"><a href="../scss.html" class="menu__link">SCSS</a></li>
+								<li class="menu__item"><a href="../JavaScript.html" class="menu__link">JavaScript</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">WordpRess</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">GIT</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="main__catalog catalog">
+				<div class="catalog__container">
+					<div data-spollers class="spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title">МЕНЮ</summary>
+							<div class="spollers__body">
+								<form class="filter__body">
+									<div class="filter__section section-filter">
+										<div class="section-filter__body">
+											<nav class="section-filter__menu menu-filter">
+												<ul class="menu-filter__list">
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="documentation.html">Сборщик проектов Gulp 4</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="videolessons.html">Видео уроки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Роботи верски сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Пример кода</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Заготовки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">названия классов HTML/CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка адаптивности</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Grid CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Flexbox CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Верстка сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Претпроцесор SCSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Tailwind CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Курс по Frontend разработке</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</form>
+							</div>
+						</details>
+					</div>
+					<!-- ========================================= -->
+					<div class="catalog__body">
+						<div class="catalog__header">
+							<h1 class="catalog__title">Встановлення та запуск шаблону. Підготовка до роботи</h1>
+						</div>
+
+						<div class="catalog__text">
+							<p>Отже, ви <span>завантажили шаблон “Чертоги Фрілансера” v3.0.0</span> (далі ЧФ), які далі кроки?</p>
+							<h2>Встановлення шаблону</h2>
+							<p>
+								Насамперед слід розархівувати zip-архів у вашу папку проекту. Слідкуйте за тим, щоб папка та її
+								батьківські папки не
+								містили в назві кирилицю, пробіли, символи # та !
+							</p>
+							<img class="img__image ibg" src="img/01.webp" alt="Image">
+							<p>&#9757;<span>Вміст архіву в папці проекту</span></p>
+							<p>
+								Якщо ви до цього моменту не користувалися інструментом GULP, WEBPACK та пакетним менеджером NPM, слід
+								<span>завантажити та
+									встановити Node.js.</span> Завантажуйте версію рекомендовану для більшості.
+							</p>
+							<p>
+								Далі відкриваємо термінал у цій папці проекту. Термінал може бути вбудований або відкритий окремо від
+								редактора.
+								Рекомендую використовувати термінал <span>GIT Bash.</span>
+							</p>
+							<p>
+								Якщо ви до цього моменту не користувалися інструментом GULP, введіть у термінал команду <span>npm i
+									gulp-cli -g</span> це встановить
+								GULP у систему глобально.
+							</p>
+							<p>Після завершення встановлення GULP введіть команду <span>npm i</span></p>
+							<p>
+								&#9996; У процесі установки в терміналі можуть бути повідомлення з позначкою WARN на жовтому фоні.
+								<br>&#9996; Ці повідомлення можна
+								ігнорувати. Але якщо ви отримуєте повідомлення ERR! <br>&#9996; червоним кольором — це критична помилка
+								та її потрібно виправляти.
+							</p>
+							<img class="img__image ibg" src="img/02.webp" alt="Image">
+							<p><span>Попередження можна ігнорувати</span></p>
+							<img class="img__image ibg" src="img/03.webp" alt="Image">
+							<p><span>Помилка залежностей</span></p>
+							<p>
+								Часто може виникнути помилка залежностей встановлюваних пакетів (плагінів), і в NPM вище 7 версії це
+								призводить до
+								критичної помилки та зупинки інсталяції.
+							</p>
+							<p>
+								Щоб вирішити цю проблему, виконайте команду <span>npm i --legacy-peer-deps,</span> це запустить процес
+								установки, ігноруючи подібні
+								несумісності.
+							</p>
+							<p>
+								&#9996;Пам’ятайте – NodeJS та Python у вашій системі мають бути останніх версій
+							</p>
+							<p>
+								Після успішного встановлення, у вас з’явиться папка node_modules та файл package-lock.json
+							</p>
+							<img class="img__image ibg" src="img/04.webp" alt="Image">
+							<p><span>Встановлення завершено</span></p>
+							<p>
+								Детальніше про <span>архітектуру папок та файлів</span> ЧФ ми поговоримо в наступному розділі, а поки що
+								продовжуємо підготовку до
+								роботи
+							</p>
+							<h2>Запуск шаблону та режими роботи</h2>
+							<p>
+								Шаблон «Чертоги Фрілансера» може виконувати кілька сценаріїв:
+							</p>
+							<p>
+								&#9989; Режим розробника. Команда запуску <span>npm run dev</span> <br> <br>
+								&#9989; Режим продакшену. Команда запуску <span>npm run build</span> <br> <br>
+								&#9989; Режим продакшена та надсилання результату на сервер по FTP. Команда запуску <span>npm run
+									deploy</span> <br> <br>
+								&#9989; Режим продакшена та створення ZIP-архіву з результатом. Команда запуску <span>npm run zip</span>
+								<br> <br>
+								&#9989; Режим продакшена без створення WEBP зображень та дій пов’язаних із цим форматом. Команда запуску
+								<span>npm run devbuild</span>
+							</p>
+							<p>Додаткові команди:</p>
+							<p>
+								&#9989; Ручне створення SVG спрайт. Команда запуску <span>npm run sprite</span> <br> <br>
+								&#9989; Конвертація шрифтів із примусовим перезаписом файлу стилів. Команда запуску <span>npm run
+									fonts</span>
+							</p>
+							<h2>Режим розробника</h2>
+							<p>У режимі розробника виконуються лише необхідні для розробки завдання:</p>
+							<p>
+								&#128073; Конвертація шрифтів та запис у файл стилів <br> <br>
+								&#128073; Конвертація SCSS файлів у CSS файли, перейменування псевдонімів <br> <br>
+								&#128073; Складання HTML файлів, перейменування псевдонімів <br> <br>
+								&#128073; При використання PUG, файли перетворюються на HTML, перейменовуються псевдоніми <br> <br>
+								&#128073; Збираються JS файли <br> <br>
+								&#128073; Запускається локальний сервер, відкривається браузер з індексною сторінкою. <br> <br>
+								&#128073; Запускається спостерігач за зміною фалів. При кожній зміні файлу браузер оновлює сторінку
+								(крім сторінки-змісту) <br> <br>
+								&#128073; Копіюються файли із зазначеної папки <br> <br>
+								&#128073; HTML CSS JS файли результату не записуються на диск <span>(папка dist не створюється)</span>.
+								<br> <br>
+							</p>
+							<p>
+								&#9996; Якщо у вас слабкий ПК (мало ОЗУ) або шаблон з часом починає гальмувати, відкрийте файл
+								<span>config/webpack.dev.js</span> та
+								розкоментуйте блок :
+							</p>
+							<div class="m">
+								<p><code>
+										<br>
+										<span class="b">devMiddleware:</span> {<br>
+										<span class="f">writeToDisk</span>: <span class="h">true;</span> <br>
+										}
+									</code></p>
+							</div>
+							<p>
+								&#9996; Параметр увімкне створення папки <span>dist</span> у режимі розробника, що підвищує швидкість
+								роботи збірки на слабких ПК.
+							</p>
+							<h2>Режим продакшену</h2>
+							<p>
+								У режимі продакшену виконується фіналізація проекту, а саме:
+							</p>
+							<p>
+								&#128073; Конвертація шрифтів та запис у файл стилів <br> <br>
+								&#128073; Конвертація зображень у WEBP формат. Стиснення та оптимізація JPG PNG SVG картинок <br> <br>
+								&#128073; Конвертація SCSS файлів у CSS файли, перейменування псевдонімів, групування медіа-запитів,
+								додаються вендорні префікси
+								для забезпечення кросбраузерності, обробляється підключення WEBP зображень, проводиться стиснення
+								несжата копія) <br> <br>
+								&#128073; Складання HTML файлів, перейменування псевдонімів, обробляється підключення WEBP зображень
+								<br> <br>
+								&#128073; При використанні PUG, файли перетворюються на HTML, перейменовуються псевдоніми, обробляється
+								підключення WEBP зображень <br> <br>
+								&#128073; Збираються JS файли, проводиться стиснення та оптимізація кінцевого файла. У результат
+								потрапляє лише використовуваний
+								код. Підсумком завдання буде створення двох файлів: стисненого app.min.js (підключений до HTML) і не
+								стисненого app.js
+								для подальшого редагування іншими фахівцями. <br> <br>
+								&#128073; Копіюються файли із зазначеної папки <br> <br>
+								&#128073; Всі файли з результатом записуються на диск (зазвичай до папки dist), локальний сервер не
+								запускається <br> <br>
+							</p>
+							<p>
+								&#9996; Отже, давайте запустимо наш шаблон в режимі розробника, для цього в терміналі виконуємо команду
+								<span>npm run dev</span>
+							</p>
+							<p>
+								Після запуску система виконає всі завдання режиму розробника, описані вище. Результатом роботи має стати
+								відкрита у
+								браузері сторінка змісту.
+							</p>
+							<p>
+								&#9996;Увага, сторінка змісту не оновлюється автоматично під час її редагування
+							</p>
+							<img class="img__image ibg" src="img/05.webp" alt="Image">
+							<p><span>Старт виконання команди</span></p>
+							<img class="img__image ibg" src="img/06.webp" alt="Image">
+							<p><span>Команда успішно виконана</span></p>
+							<img class="img__image ibg" src="img/07.webp" alt="Image">
+							<p><span>Сторінку змісту відкрито у браузері</span></p>
+							<h2>Можливі помилки та їх вирішення</h2>
+							<p>
+								Якщо браузер не запустився, а в терміналі видно помилки (ERR!), переконайтеся що:
+							</p>
+							<p>
+								&#128073; У вас встановлено Node.js та Python останньої версії <br> <br>
+								&#128073; Термінал відкритий з правами адміністратора <br> <br>
+								&#128073; У назвах папок на всьому шляху до проекту немає символу # або ! <br> <br>
+								&#128073; Папки та файли мають бути названі латиницею без пробілів <br> <br>
+								&#128073; Тег img та його вміст мають бути записані в один рядок без переносів <br> <br>
+								&#128073; В атрибуті src повинен бути вказаний шлях до існуючої малюнку без пробілів <br> <br>
+							</p>
+							<p>
+								Якщо помилка пов’язана з node-sass, запустіть команду <span>npm rebuild node-sass</span> <br>
+								При помилці пов’язаної з Python запустіть команду <span>npm install -g windows-build-tools</span> <br>
+								При помилці Error [ERR_UNSUPPORTED_ESM_URL_SCHEME]:
+							</p>
+							<p>
+								&#9996; Качаємо версію 14.15.1 <span><a href="(https://nodejs.org/dist/v14.15.1/)">(https://nodejs.org/dist/v14.15.1/),</a></span> у Zip архиві. <br>
+								&#9996; Заходимо в папку із встановленим NodeJS, розпаковуємо вміст архіву в папку, із заміною файлів.
+								<br>
+								&#9996; Далі йдемо сюди «Панель управління» => «Система» => «Додаткові параметри системи» => «Додатково»
+								=> «Змінні середовища» <br>
+								&#9996; У Системних змінних «Створити» змінну з ім’ям ‘NODE_SKIP_PLATFORM_CHECK’ і створюємо їй значення
+								‘1’. <br>
+								&#9996; Перезапускаємо систему і запускаємо шаблон згідно з інструкцією
+							</p>
+							<h2>Підготовка редактора до комфортної роботи із шаблоном</h2>
+							<p>
+								Для того щоб насолоджуватися можливостями шаблону ЧФ на повну, нам слід зробити деякі налаштування
+								редактора. Як приклад
+								представлений редактор VS Code
+							</p>
+							<h2>Налаштування псевдонімів</h2>
+							<p>
+								У розділі <span>Архітектура шаблону. Файли та папки</span> ви дізнаєтеся що різні частини HTML/PUG SCSS
+								файлів знаходяться на різних
+								рівнях вкладеності, що створює певні незручності при підключенні, наприклад картинок, у процесі
+								розробки.
+							</p>
+							<p>
+								Незручності ми не любимо тому налаштуємо так звані псевдоніми (аліаси) шляхів до папок. Для цього нам
+								потрібно
+								встановити плагін <span>Path Autocomplete.</span> Після встановлення відкриваємо налаштування редактора
+								(settings.json), для цього
+								тиснемо F1 у редакторі та в рядку пошуку пишемо Open Settings і тиснемо на посилання Open Settings
+								(JSON).
+							</p>
+							<p>У цей файл потрібно акуратно вставити наступний код:</p>
+							<div class="m">
+								<p><code>
+										<br>
+										<span class="b">"path-autocomplete.pathMappings":</span> {<br>
+										<span class="f">"img"</span>: <span class="h">"${folder}/simg"</span>, <span>// alias for images</span> <br>
+										<span class="f">"@scss"</span>: <span class="h">"${folder}/src/scss"</span>, <span>// alias for scss</span> <br>
+										<span class="f">"@js"</span>: <span class="h">"${folder}/src/js"</span>, <span>// alias for scss</span> <br>
+										}
+									</code></p>
+							</div>
+							<p>Дуже важливо дотримуватися синтаксису JSON, звертайте увагу на коми:</p>
+							<img class="img__image ibg" src="img/08.webp" alt="Image">
+							<p><span>Правильна вставка коду</span></p>
+							<p>Після цього ви можете сміливо використовувати псевдоніми при підключенні файлів, наприклад:</p>
+							<pre class="wp-block-code"><code class="xml"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"img/cover.webp"</span> <span class="attribute">alt</span>=<span class="value">"Малюнок"</span>&gt;</span></code>
+							</pre>
+							<p>
+								Редактор розпізнає псевдонім і виведе список файлів у зазначеній папці, а під час збирання система сама поміняє
+								псевдонім на потрібний шлях!
+							</p>
+							<h2>Налаштування сніпетів</h2>
+							<p>
+								Сніпети — це короткі коди, які можуть викликати готові заготовки коду будь-якого обсягу. Це величезно підвищує швидкість
+								розробки.
+							</p>
+							<p>
+								Звичайно, я використав цю супер можливість у своїх чертогах. Тобто, побудова, наприклад, правильної HTML структури для
+								того чи іншого JS модуля я додав у СНІПЕТ.
+							</p>
+							<p>
+								Щоб додати набір сніпетів із шаблону до себе в редактор виконуємо такі дії:
+							</p>
+							<p>
+								&#9996; Відкриваємо файл snnipets.txt з архіву ЧФ і копіюємо весь вміст <br> <br>
+								&#9996; У редакторі VS Code переходимо в налаштування (шестерня) -> User Snippets ->New Global Snippets File пишемо назву,
+								наприклад fls, і замінюємо вміст на скопійований з snnipets.txt <br> <br>
+								&#9996; При оновленні шаблону та сніпетів створювати новий файл не потрібно, слід відкрити існуючий та оновити вміст <br> <br>
+							</p>
+							<p>
+								&#128073;Ви можете створювати і додавати свої сніпети, допоможе в цьому сервіс
+								<span><a href="https://snippet-generator.app/">https://snippet-generator.app/</a></span>
+							</p>
+							<p>
+								Чудово, сніпети ЧФ на борту! У цій документації, а також у коді шаблону ви часто будете зустрічати підказки із
+								зазначенням сніпету.
+							</p>
+							<h2>Додаткові матеріали</h2>
+							<p>
+								Для кращого розуміння установки Node.JS, GIT Bash, GULP, налаштування псевдонімів перегляньте ці відео:
+							</p>
+							<div class="modal">
+
+								<div class="modal-content">
+									<iframe src="https://www.youtube.com/embed/jU88mLuLWlk?si=FeGa3VAgSWEVg_il" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- ========================================= -->
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20241216071557"></script>
+	<script src="js/1.js?_v=20241216071557"></script>
+	<script src="js/2.js?_v=20241216071557"></script>
+	<script src="js/3.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js?_v=20241216071557"></script>
+</body>
+
+</html>

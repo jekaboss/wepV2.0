@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>wep-шпаргалка</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="../css/style.min.css?_v=20241216071557">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- Подключаем Prism.js -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css?_v=20241216071557" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css?_v=20241216071557" rel="stylesheet" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="het-men">
+					<a href="../index.html" class="header__logo"><img src="../img/logo.webp" width="50px" alt="logo"></a>
+					<article class="search">
+						<div class="icon"></div>
+						<form action="#" method="get" enctype="multipart/form-data" class="search__form">
+							<input type="text" id="searchInput" type="search" class="search__input" placeholder="Пошук">
+							<div id="searchResults"></div>
+						</form>
+						<!-- <input type="text" id="searchInput" placeholder="Введіть ваш запит...">
+				<div id="searchResults"></div> -->
+					</article>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="../html.html" class="menu__link">HTML</a></li>
+								<li class="menu__item"><a href="../css.html" class="menu__link">CSS</a></li>
+								<li class="menu__item"><a href="../scss.html" class="menu__link">SCSS</a></li>
+								<li class="menu__item"><a href="../JavaScript.html" class="menu__link">JavaScript</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">WordpRess</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">GIT</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="main__catalog catalog">
+				<div class="catalog__container">
+					<div data-spollers class="spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title">МЕНЮ</summary>
+							<div class="spollers__body">
+								<form class="filter__body">
+									<div class="filter__section section-filter">
+										<div class="section-filter__body">
+											<nav class="section-filter__menu menu-filter">
+												<ul class="menu-filter__list">
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="documentation.html">Сборщик проектов Gulp 4</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="videolessons.html">Видео уроки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Роботи верски сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Пример кода</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Заготовки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">названия классов HTML/CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка адаптивности</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Grid CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Flexbox CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Верстка сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Претпроцесор SCSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Tailwind CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Курс по Frontend разработке</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</form>
+							</div>
+						</details>
+					</div>
+					<!-- ========================================= -->
+					<div class="catalog__body">
+						<div class="catalog__header">
+							<h1 class="catalog__title">Модуль “Прокручування до потрібного блоку”. Плавна навігація по сторінці.</h1>
+						</div>
+
+						<div class="catalog__text">
+							<p>
+								У цьому модулі реалізований плавний скролл після натискання на посилання (кнопці) до потрібного блоку на сторінці. Якщо
+								у адресі сторінки буде передано хеш і блок з таким селектором буде знайдено на сторінці, прокручування до блоку
+								відбудеться автоматично. Також модуль дозволяє побудувати навігацію по сторінці з додаванням класу поточному пункту
+								навігації (пункту меню) при скроллі до певного блоку.
+							</p>
+							<h2>Підключення функціоналу</h2>
+							<p>
+								<span>[JS]</span> У файлі <span>js/app.js</span> розкоментувати рядок <span>flsScroll.pageNavigation();</span>
+							</p>
+							<h2>Використання функціоналу</h2>
+							<p>
+								<span>[HTML]</span> До елементів навігації (пунктів меню), або до довільного об’єкта, додаємо HTML-атрибут <span>data-goto</span>, а в якості
+								значення вказуємо CSS селектор блоку до якого потрібно прокрутити:
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="f"> &#8249;a href="#" data-goto=".имя класса блока" class="link"&#8250;</span><span class="h"> Пункт навігаціі &#8249;/a&#8250; </span><br> <br>
+										<span class="f"> &#8249;a href="#" data-goto="#id блока" class="link"&#8250;</span><span class="h"> Пункт навігаціі &#8249;/a&#8250; </span>
+									</code></p>
+							</div>
+							<p>
+								Якщо потрібно, щоб скролл враховував шапку (не докручував на висоту шапки, використовується при фіксованих шапках)
+								потрібно додати до об’єкта навігації атрибут <span>data-goto-header</span>:
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="f"> &#8249;a href="#" data-goto-header data-goto=".имя класса блока" class="link"&#8250;</span><span class="h"> Пункт навігаціі &#8249;/a&#8250; </span><br>
+									</code></p>
+							</div>
+							<p>
+								Якщо потрібно, щоб скролл не докручував до блоку на вказану висоту, необхідно додати до об’єкта навігації атрибут
+								<span>data-goto-top</span>, а в якості значення вказати число – необхідну висоту:
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="f"> &#8249;a href="#" data-goto-top="30" data-goto="#id блока" class="link"&#8250;</span><span class="h"> Пункт навігаціі &#8249;/a&#8250; </span><br>
+									</code></p>
+							</div>
+							<p>
+								<span>data-goto-top</span> можна поєднувати з <span>data-goto-header</span>, тоді значення data-goto-top додасться до висоти шапки.
+							</p>
+							<h2>Додавання класу до поточного пункту навігації</h2>
+							<p>
+								Для включення функціоналу додавання класу підключаємо модуль спостерігача:
+							</p>
+							<p>
+								<span>[JS]</span> У файлі <span>js/app.js</span> розкоментувати рядок <span>import ‘./libs/watcher.js’</span> <br>
+								<span>[HTML]</span> Для блоків до яких прокручується сторінка додаємо атрибут <span>data-watch</span> зі значенням <span>navigator</span>:
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="f"> &#8249;a href="#" data-goto=".some-section" class="link"&#8250;</span><span class="h"> Пункт навігаціі &#8249;/a&#8250; </span><br> <br>
+										.... <br> <br>
+										<span class="f"> &#8249;section data-watch="navigator" class="some-section"&#8250;</span><span class="h"> &#8249;/section&#8250; </span>
+									</code></p>
+							</div>
+							<p>
+								Після цього, при прокручуванні до хмари (об’єкту) навігації, до відповідного пункту навігації буде додано клас
+								<span>_navigator-active</span>
+							</p>
+							<h2>
+								Прокручування до потрібного блоку по хешу (при відкритті сторінки)
+							</h2>
+							<p>
+								Для того щоб прокрутити сторінку до потрібного блоку при відкритті сторінки необхідно додати до адреси хеш, що містить
+								<span>ім’я класу потрібного блоку</span>.
+							</p>
+							<p><span>Приклад адресного рядка та потрібного блоку:</span></p>
+							<div class="m">
+								<p><code>
+										<span class="f"> https://template.fls.guru/index.html#some-section</span><br>
+									</code></p>
+							</div>
+							<br>
+							<div class="m">
+								<p><code>
+										<span class="f"> &#8249;section class="some-section"&#8250;</span><span class="h"></span><br> <br>
+										.... <br> <br>
+										<span class="f"> &#8249;/section&#8250;</spanclass="h"> </span>
+									</code></p>
+							</div>
+							<h2>Додавання функціоналу, плавне прокручування на iOS</h2>
+							<p>
+								За промовчанням, прокручування виконується методом scrollTo() з параметром behavior: “smooth” без застосування
+								додаткових плагінів. Але це обмежує функціонал цього модуля – не можна вказати швидкість прокручування, а також можуть
+								виникнути проблеми в <span><a href="https://caniuse.com/?search=scrollTo">деяких версіях браузерів на iOS</a></span>. Для вирішення всіх проблем можна підключити додатковий плагін
+								SmoothScroll, зробити це можна у файлі <span>js/files/scroll/gotoblock.js</span> розкоментувавши рядок <span>import SmoothScroll from ‘smooth-scroll’</span>; подальше перемикання прокручування на плагін відбудеться автоматично.
+							</p>
+							<p>
+								При роботі з плагіном з’являється можливість вказати швидкість прокручування, для цього елементу навігації потрібно
+								додати атрибут <span>data-goto-speed</span> і вказати число, що означає кількість мілісекунд за які прокручується (1000 = 1 секунда),
+								за замовчуванням 500.
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="f"> &#8249;a href="#" data-goto-speed="1000" data-goto=".some-section" class="link"&#8250;</code> <span class="h"> Пункт навігаціі &#8249;/a&#8250; </span><br>
+									</code></p>
+							</div>
+							<h2>Розташування та додаткові дані</h2>
+							<p>
+								Функціонал знаходиться у <span>js/files/scroll/scroll.js.</span> Назва функціі <span>pageNavigation()</span>. Допоміжний модуль прокручування
+								gotoblock знаходиться у <span>js/files/scroll/gotoblock.js</span>. Модуль спостерігача знаходиться у файлі <span>js/libs/watcher.js.</span>
+							</p>
+							<p>Якщо в момент кліка на пункт навігації було відкрито меню “бургер”, воно закриється автоматично.</p>
+						</div>
+
+					</div>
+					<!-- ========================================= -->
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20241216071557"></script>
+	<script src="js/1.js?_v=20241216071557"></script>
+	<script src="js/2.js?_v=20241216071557"></script>
+	<script src="js/3.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js?_v=20241216071557"></script>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>wep-шпаргалка</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="../css/style.min.css?_v=20241216071557">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- Подключаем Prism.js -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css?_v=20241216071557" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css?_v=20241216071557" rel="stylesheet" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="het-men">
+					<a href="../index.html" class="header__logo"><img src="../img/logo.webp" width="50px" alt="logo"></a>
+					<article class="search">
+						<div class="icon"></div>
+						<form action="#" method="get" enctype="multipart/form-data" class="search__form">
+							<input type="text" id="searchInput" type="search" class="search__input" placeholder="Пошук">
+							<div id="searchResults"></div>
+						</form>
+						<!-- <input type="text" id="searchInput" placeholder="Введіть ваш запит...">
+				<div id="searchResults"></div> -->
+					</article>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="../html.html" class="menu__link">HTML</a></li>
+								<li class="menu__item"><a href="../css.html" class="menu__link">CSS</a></li>
+								<li class="menu__item"><a href="../scss.html" class="menu__link">SCSS</a></li>
+								<li class="menu__item"><a href="../JavaScript.html" class="menu__link">JavaScript</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">WordpRess</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">GIT</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="main__catalog catalog">
+				<div class="catalog__container">
+					<div data-spollers class="spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title">МЕНЮ</summary>
+							<div class="spollers__body">
+								<form class="filter__body">
+									<div class="filter__section section-filter">
+										<div class="section-filter__body">
+											<nav class="section-filter__menu menu-filter">
+												<ul class="menu-filter__list">
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="documentation.html">Сборщик проектов Gulp 4</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="videolessons.html">Видео уроки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Роботи верски сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Пример кода</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Заготовки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">названия классов HTML/CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка адаптивности</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Grid CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Flexbox CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Верстка сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Претпроцесор SCSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Tailwind CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Курс по Frontend разработке</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</form>
+							</div>
+						</details>
+					</div>
+					<!-- ========================================= -->
+					<div class="catalog__body">
+						<div class="catalog__header">
+							<h1 class="catalog__title">Модуль кастомізації елемента SELECT</h1>
+						</div>
+
+						<div class="catalog__text">
+							<p>
+								Модуль дозволяє як завгодно стилізувати стандартний елемент форми SELECT та його пункти OPTION, а також реалізує
+								додаткові можливості.
+							</p>
+							<h2>Підключення модуля</h2>
+							<p>
+								<span>[HTML]</span> У потрібному місці викликати <span>сніпет sel</span>, редагувати HTML-код селекту під свої потреби <br>
+								<span>[SCSS]</span> Розкоментувати рядок <span>@import “select”</span>; у файлі <span>src/scss/base/forms/forms.scss</span> – це підключить базові стилі селекту, відредагувати під свої потреби <br>
+								<span>[JS]</span> Розкоментувати рядок <span>import ‘./libs/select.js’</span> у файлі <span>js/app.js</span>
+							</p>
+							<h2>Налаштування та функціонал модуля</h2>
+							<p>
+								Для підключення того чи іншого функціоналу модуля використовуються різні HTML-атрибути
+							</p>
+							<h2>Атрибути для тегу &#8249;SELECT&#8250;:</h2>
+							<p>
+								&#9989; <span>multiple</span> – мультивибір <br> <br>
+								&#9989; <span>disabled</span> – недоступний <br> <br>
+								&#9989; <span>data-class-modif=имя класса</span> – модифікатор до конкретного селекту. У результаті вийде select select_ім’я класу <br> <br>
+								&#9989; <span>data-tags</span>– режим тегів (тільки для multiple) дозволяє вставляти вибрані значення у вигляді тегів з хрестиком для
+								видалення. Також є можливість виводити ці теги в будь-якому зазначеному місці, вказавши селектор блоку як значення
+								атрибуту <br> <br>
+								&#9989; <span>data-scroll</span> – включить прокрутку для списку, додатково можна підключити кастомний скролл simplebar в js/app.js.
+								Зазначене число для атрибуту обмежить висоту контейнера випадаючого списку <br> <br>
+								&#9989; <span>data-checkbox</span> (в роботі) – стилізація елементів по checkbox (тільки для multiple) <br> <br>
+								&#9989; <span>data-show-selected</span> – вимикає приховування вибраного елемента <br> <br>
+								&#9989; <span>data-search</span> – дозволяє шукати за списком <br> <br>
+								&#9989; <span>data-speed</span> – дозволяє вказати швидкість відкриття/закриття списку в мілісекундах за замовчуванням 150 <br> <br>
+								&#9989; <span>data-open</span> – селект відкритий відразу <br> <br>
+								&#9989; <span>data-submit</span> – відправляє форму при зміні селекту <br> <br>
+								&#9989; <span>data-pseudo-label=заголовок</span> – додає псевдоелемент до заголовка селекту із зазначеним текстом, а також клас
+								<span>_select-pseudo-label</span> <br> <br>
+							</p>
+							<h2>Атрибути для тегу &#8249;OPTION&#8250;:</h2>
+							<p>
+								&#9989; <span>data-class=имя класса</span> – додає клас <br> <br>
+								&#9989; <span>data-asset=путь</span> к картинке или текст – додає в елемент списку структуру двох колонок із зазначеними даними <br> <br>
+								&#9989; <span>data-href=адрес</span> ссылки – додає посилання до елементу списку <br> <br>
+								&#9989; <span>data-href-blank</span> – відкриє посилання у новому вікні <br> <br>
+							</p>
+							<h2>Атрибути для плейсхолдера (плейсхолдер – це &#8249;OPTION&#8250; з порожнім value)</h2>
+							<p>
+								&#9989; <span>data-label</span> – додає label до селекту <br> <br>
+								&#9989; <span>data-show</span> – показує плейсхолдер у списку (тільки для одиничного вибору) <br> <br>
+							</p>
+							<h2>Атрибути для інших елементів</h2>
+							<p>
+								&#9989;<span>data-one-select</span> – селекти всередині об’єкта з цим атрибутом будуть відкриватися лише по одному. Тобто при відкритті
+								селекту інший відкритий селект закривається.
+							</p>
+							<h2>Пример селекта с некоторыми атрибутами</h2>
+							<br>
+							<div class="m">
+								<p><code>
+										<span class="b">&#8249;select data-submit data-scroll name="form[]" data-class-modif="form"&#8250;</span> <br>
+										<span class="b">&#8249;option value="" selected&#8250;</span>Плейсхолдер<span>&#8249;/option &#8250;</span> <br>
+										<span class="b">&#8249;option value="2"&#8250;</span>Пункт<span>&#8249;/option &#8250;</span> <br>
+										<span class="b">&#8249;option data-href="about.html" value="3"&#8250;</span>Пункт посилання<span>&#8249;/option &#8250;</span> <br>
+										<span class="b">&#8249;option value="4"&#8250;</span>Пункт<span>&#8249;/option &#8250;</span> <br>
+										<span>&#8249;/select &#8250;</span>
+									</code></p>
+							</div>
+							<br>
+							<h2>Класи, які формуються модулем</h2>
+							<p>
+								&#9989; select – Головний блок <br> <br>
+								&#9989; select__body – Тіло селекту <br> <br>
+								&#9989; select__title – Заголовок <br> <br>
+								&#9989; select__value – Значення у заголовку <br> <br>
+								&#9989; select__label – Лейбл <br> <br>
+								&#9989; select__input – Поле вводу <br> <br>
+								&#9989; select__text – Оболонка текстових даних <br> <br>
+								&#9989; select__link – Посилання в елементі <br> <br>
+								&#9989; select__options – Випадаючий список <br> <br>
+								&#9989; select__scroll – Оболонка при скролі <br> <br>
+								&#9989; select__option – Пункт <br> <br>
+								&#9989; select__content – Оболонка контенту в заголовку <br> <br>
+								&#9989; select__row – Ряд <br> <br>
+								&#9989; select__asset – Додаткові дані <br> <br>
+								&#9989; _select-disabled – Заборонено <br> <br>
+								&#9989; _select-tag – Клас тега <br> <br>
+								&#9989; _select-open – Список відкритий <br> <br>
+								&#9989; _select-active – Список обраний <br> <br>
+								&#9989; _select-focus – Список у фокусі <br> <br>
+								&#9989; _select-multiple – Мультивибір <br> <br>
+								&#9989; _select-checkbox – Стиль чекбоксу <br> <br>
+								&#9989; _select-selected – Вибраний пункт <br> <br>
+								&#9989; _select-pseudo-label – Псевдолейбл для заголовка селекту <br> <br>
+							</p>
+							<h2>Події</h2>
+							<p>
+								Після кожного вибору елементи селекту спрацьовує подію <span>selectCallback</span>, її можна відловити в будь-якій частині коду:
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="b">document.addEventListener&#40;"selectCallback", function (e)</span> &#123; <br>
+										<span>// Селект</span> <br>
+										<span>const currentSelect = e.detail.select;</span> <br>
+										&#125;&#41; ;
+									</code></p>
+							</div>
+							<br>
+							<h2>Розташування та додаткові дані</h2>
+							<p>Клас <span>SelectConstructor</span> знаходиться у файлі <span>js/libs/select.js</span></p>
+						</div>
+
+					</div>
+					<!-- ========================================= -->
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20241216071557"></script>
+	<script src="js/1.js?_v=20241216071557"></script>
+	<script src="js/2.js?_v=20241216071557"></script>
+	<script src="js/3.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js?_v=20241216071557"></script>
+</body>
+
+</html>

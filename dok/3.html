@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>wep-шпаргалка</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="../css/style.min.css?_v=20241216071557">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- Подключаем Prism.js -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css?_v=20241216071557" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css?_v=20241216071557" rel="stylesheet" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="het-men">
+					<a href="../index.html" class="header__logo"><img src="../img/logo.webp" width="50px" alt="logo"></a>
+					<article class="search">
+						<div class="icon"></div>
+						<form action="#" method="get" enctype="multipart/form-data" class="search__form">
+							<input type="text" id="searchInput" type="search" class="search__input" placeholder="Пошук">
+							<div id="searchResults"></div>
+						</form>
+						<!-- <input type="text" id="searchInput" placeholder="Введіть ваш запит...">
+				<div id="searchResults"></div> -->
+					</article>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="../html.html" class="menu__link">HTML</a></li>
+								<li class="menu__item"><a href="../css.html" class="menu__link">CSS</a></li>
+								<li class="menu__item"><a href="../scss.html" class="menu__link">SCSS</a></li>
+								<li class="menu__item"><a href="../JavaScript.html" class="menu__link">JavaScript</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">WordpRess</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">GIT</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="main__catalog catalog">
+				<div class="catalog__container">
+					<div data-spollers class="spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title">МЕНЮ</summary>
+							<div class="spollers__body">
+								<form class="filter__body">
+									<div class="filter__section section-filter">
+										<div class="section-filter__body">
+											<nav class="section-filter__menu menu-filter">
+												<ul class="menu-filter__list">
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="documentation.html">Сборщик проектов Gulp 4</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="videolessons.html">Видео уроки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Роботи верски сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Пример кода</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Заготовки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">названия классов HTML/CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка адаптивности</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Grid CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Flexbox CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Верстка сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Претпроцесор SCSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Tailwind CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Курс по Frontend разработке</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</form>
+							</div>
+						</details>
+					</div>
+					<!-- ========================================= -->
+					<div class="catalog__body">
+						<div class="catalog__header">
+							<h1 class="catalog__title">Архітектура шаблону. Файли та папки
+							</h1>
+						</div>
+
+						<div class="catalog__text">
+							<h2>Розархівувавши завантажений шаблон, в корені ви виявите такі файли та папки:</h2>
+							<p>
+								&#128073; Файл <span>package.json</span> – файл, що містить команди запуску збирачів, інформацію про встановлені плагіни та їх версії (можна
+								редагувати за потреби). А також іншу інформацію про автора та версію шаблону. <br> <br>
+								&#128073; Файл <span>gulpfile.js</span> – головний файл збирача GULP. Містить підключення різних завдань та сценарії їх виконання (можна
+								редагувати за потреби) <br> <br>
+								&#128073; Файл <span>snnipets.txt</span> – файл зі сніппетами, які використовуються при роботі з шаблоном. Як їх додати до свого редактора <br> <br>
+								&#128073; Файл <span>README.txt</span> – коротка інформація щодо роботи з шаблоном <br> <br>
+								&#128073; Файл <span>cover.webp</span> – обкладинка ЧФ <br> <br>
+								&#128073; Папка <span>config</span> – містить папки та файли для налаштування роботи інструментів, а також файли з окремими завданнями. <br> <br>
+								&#128073; Папка <span>src</span> – містить вихідні файли та папки проекту. <br> <br>
+							</p>
+							<h2>Вміст папки config:</h2>
+							<p>
+								&#128073; Файл <span>gulp-settings.js</span> – містить налаштування шляхів до файлів та папок для роботи GULP, а також налаштування FTP
+								з’єднання для вивантаження результату на сервер <br> <br>
+								&#128073; Файл <span>gulp-plugins.js</span> – допоміжний файл, містить підключення та експорт списку загальних плагінів для завдань GULP <br> <br>
+								&#128073; Файл <span>webpack.dev.js</span> – містить конфігурацію роботи WEBPACK у режимі розробника <br> <br>
+								&#128073; Файл <span>webpack.prod.js</span> – містить конфігурацію роботи WEBPACK у режимі продакшн <br> <br>
+								&#128073; Папка <span>gulp-tasks</span> – містить файли окремих завдань GULP <br> <br>
+							</p>
+							<h2>Вміст папки src:</h2>
+							<p>
+								&#128073; Файл <span>favicon.ico</span> – іконка сайту <br> <br>
+								&#128073; Файл <span>index.html</span> -індексна сторінка-зміст, вона не оновлюється автоматично під час редагування (за бажанням видалити) <br> <br>
+								&#128073; Файл <span>home.html</span> – головна сторінка сайту (за бажанням перейменувати в index.html) <br> <br>
+								&#128073; Папка <span>files</span> (порожня) – всі файли цієї папки будуть скопійовані в папку з результатом (dist/files) <br> <br>
+								&#128073; Папка <span>fonts</span> (порожня) – використовується для підключення локальних та іконкових шрифтів <br> <br>
+								&#128073; Папка <span>svgicons</span> (порожня) – використовується для створення SVG спрайту <br> <br>
+								&#128073; Папка <span>html</span> – містить .HTM файли, які підключаються до HTML файлів сторінок (наприклад, home.html). Тут можна створювати
+								свої файли, що підключаються <br> <br>
+								&#128073; Папка <span>scss</span> – містить файли та папки стилів сайту <br> <br>
+								&#128073; Папка <span>js</span> – містить файли та папки скриптів сайту <br> <br>
+								&#128073; Папка <span>img</span> – тут зберігаються зображення проекту. Спочатку тільки кавер-фото шаблону <br> <br>
+							</p>
+							<h2>Вміст папки src/html:</h2>
+							<p>Файли цієї папки призначені для підключення до HTML-файлів сторінок.</p>
+							<p>
+								&#128073; Файл <span>_header.htm</span> – підготовка до створення шапки сайту. Містить тег <span>header</span> та обмежуючий контейнер. Спочатку
+								підключено до home.html <br> <br>
+								&#128073; Файл <span>_footer.htm</span> – підготовка до створення підвалу сайту. Містить тег <span>footer</span> та обмежуючий контейнер. Спочатку
+								підключено до home.html <br> <br>
+								&#128073; Файл <span>_head.htm</span> – містить тег <span>head</span> всередині якого вказані метатеги, підключена іконка сайту, файл стилів, а також тег <span>title</span> зізмінною-заголовком. Спочатку підключено до home.html <br> <br>
+								&#128073; Файл <span>_js.htm</span> – призначений для підключення загальних JS-файлів. Містить підключення основного файлу js/app.min.js із
+								результату. Спочатку підключено до home.html <br> <br>
+								&#128073; Файл <span>_popup.htm</span> – підготовка до створення попапов. Містить шаблонний закоментований HTML-код. Спочатку підключений до
+								home.html. <br> <br>
+								&#128073; Файл <span>_pagging.htm</span> – підготовка до створення блоку посторінкової навігації. Містить шаблонний HTML-код. <br> <br>
+								&#128073; Файл <span>_preloader.htm</span> – містить HTML CSS та JS функціонал <br> <br>
+							</p>
+							<h2>Вміст папки src/scss:</h2>
+							<p>
+								&#128073; Файл <span>style.scss</span> – основний файл стилів. Містить різні налаштування та підключення інших файлів. <br> <br>
+								&#128073; Файл <span>home.scss</span> – файл стилів на головній сторінці. Спочатку порожній і підключений до style.scss <br> <br>
+								&#128073; Файл <span>header.scss</span> – файл стиль шапки сайту. Містить закоментований код кнопки меню-бургера. Спочатку підключено до
+								style.scss <br> <br>
+								&#128073; Файл <span>footer.scss</span> – файл стилів підвалу сайту. Спочатку порожній і підключений до style.scss <br> <br>
+								&#128073; Файл <span>common.scss</span> – файл стилів для загальних блоків конкретного проекту, що перевикористовуються. Спочатку порожній і
+								підключений до style.scss <br> <br>
+								&#128073; Файл <span>base.scss</span> – файл базового стилю шаблону ЧФ. Містить корисні SCSS-шаблони та закоментовані підключення файлів із
+								базовими стилями різних модулів. <br> <br>
+								&#128073; Папка <span>libs</span> – містить файли повних (заводських) стилів різних модулів та плагінів <br> <br>
+								&#128073; Папка <span>fonts</span> – містить файл(и) стилів, пов’язаних зі шрифтами. Містить файл icons.scss для підключення іконочного шрифту.
+								Також,, у процесі підключення локальних шрифтів, тут з’являється файл fonts.scss <br> <br>
+								&#128073; Папка <span></span> – містить допоміжні файли стилів ЧФ, також файли з базовими стилями різних моделей. Для зручності файли
+								модулів однієї групи (наприклад елементи форм) зібрані в окремі підпапки. Тут же знаходиться файл із обнуляючими
+								стилями, <span>null.scss</span> <br> <br>
+							</p>
+							<h2>Вміст папки src/js:</h2>
+							<p>
+								&#128073; Файл <span>app.js</span> – основний файл скриптів. Служить для підключення необхідного у проекті функціоналу та інших налаштувань. <br> <br>
+								&#128073; Папка <span>libs</span> – містить файли готових доповнень, як правило, не передбачені для редагування. <br> <br>
+								&#128073; <span>Папка <span>files</span> – містить файли різних модулів та іншого функціоналу.</span> <br> <br>
+							</p>
+							<h2>Вміст папки src/js/files:</h2>
+							<p>
+								&#128073; Файл <span>script.js</span> – призначений для написання свого коду для проекту. Спочатку імпортовано до app.js <br> <br>
+								&#128073; Файл <span>functions.js</span> – містить дрібні модулі та різний допоміжний функціонал. Спочатку імпортований в app.js, але модулі
+								закоментовані <br> <br>
+								&#128073; Файл <span>gallery.js</span> – містить підключення плагіна та стилів галереї. Спочатку імпортований в app.js, закоментований. При
+								необхідності, в нього можна вносити зміни <br> <br>
+								&#128073; Файл <span>sliders.js</span> – містить підключення плагіна та стилів слайдера, функціонал для автоматичного додавання класів, код для
+								створення конкретних слайдерів. Спочатку імпортований в app.js, закоментований. <br> <br>
+								&#128073; Файл <span>tippy.js</span> – містить підключення плагіна та стилів плагіна підказок. Спочатку імпортований в app.js, закоментований. <br> <br>
+								&#128073; Файл <span>map.js</span> (в работі) – містить шаблонний код для реалізації функціоналу карток. <br> <br>
+								&#128073; Файл <span>modules.js</span> – допоміжний файл для роботи ЧФ. <br> <br>
+								&#128073; Папка <span>forms</span> – містить файли модулів для роботи з формами. <br> <br>
+								&#128073; Папка <span>scroll</span> – містить модулі для роботи з прокручуванням сайту. <br> <br>
+							</p>
+						</div>
+
+					</div>
+					<!-- ========================================= -->
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20241216071557"></script>
+	<script src="js/1.js?_v=20241216071557"></script>
+	<script src="js/2.js?_v=20241216071557"></script>
+	<script src="js/3.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js?_v=20241216071557"></script>
+</body>
+
+</html>

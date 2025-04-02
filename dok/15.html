@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>wep-шпаргалка</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="../css/style.min.css?_v=20241216071557">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- Подключаем Prism.js -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css?_v=20241216071557" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css?_v=20241216071557" rel="stylesheet" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="het-men">
+					<a href="../index.html" class="header__logo"><img src="../img/logo.webp" width="50px" alt="logo"></a>
+					<article class="search">
+						<div class="icon"></div>
+						<form action="#" method="get" enctype="multipart/form-data" class="search__form">
+							<input type="text" id="searchInput" type="search" class="search__input" placeholder="Пошук">
+							<div id="searchResults"></div>
+						</form>
+						<!-- <input type="text" id="searchInput" placeholder="Введіть ваш запит...">
+				<div id="searchResults"></div> -->
+					</article>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="../html.html" class="menu__link">HTML</a></li>
+								<li class="menu__item"><a href="../css.html" class="menu__link">CSS</a></li>
+								<li class="menu__item"><a href="../scss.html" class="menu__link">SCSS</a></li>
+								<li class="menu__item"><a href="../JavaScript.html" class="menu__link">JavaScript</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">WordpRess</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">GIT</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="main__catalog catalog">
+				<div class="catalog__container">
+					<div data-spollers class="spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title">МЕНЮ</summary>
+							<div class="spollers__body">
+								<form class="filter__body">
+									<div class="filter__section section-filter">
+										<div class="section-filter__body">
+											<nav class="section-filter__menu menu-filter">
+												<ul class="menu-filter__list">
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="documentation.html">Сборщик проектов Gulp 4</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="videolessons.html">Видео уроки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Роботи верски сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Пример кода</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Заготовки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">названия классов HTML/CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка адаптивности</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Grid CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Flexbox CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Верстка сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Претпроцесор SCSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Tailwind CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Курс по Frontend разработке</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</form>
+							</div>
+						</details>
+					</div>
+					<!-- ========================================= -->
+					<div class="catalog__body">
+						<div class="catalog__header">
+							<h1 class="catalog__title">Модуль “Показати ще”</h1>
+						</div>
+
+						<div class="catalog__text">
+							<p>
+								Модуль “Показати ще” дозволяє спочатку приховати частину тексту або елементів списку, показуючи тільки вказану висоту
+								або кількість елементів. Є можливість включати функціонал на певній ширині екрану (брейкпоінті).
+							</p>
+							<h2>Підключення функціоналу</h2>
+							<p>
+								<span>[HTML]</span> У потрібному місці викликати <span>сніпет showmore</span> (класи замінити на потрібні). Або вручну створити структуру де для
+								оболонки доданий атрибут <span>data-showmore</span>, для дочірнього елемента <span>data-showmore-content</span> і кнопки <span>data-showmore-button</span>.
+								Кнопку спочатку потрібно приховати додавши атрибут <span>hidden</span> і додати два теги &#8249;span&#8250; з текстом показу та приховування
+								контенту:
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="b">&#8249;div data-showmore class="block"&#8250;</span> <br>
+										<span class="b">&#8249;div data-showmore class="block"&#8250; &#8249;/div&#8250;</span> <br>
+										<span class="b">&#8249;button hidden data-showmore-button type="button" class="block__more"&#8250;</span> <br>
+										<span class="f">&#8249;span&#8250;</span> Показати ще <span class="h">&#8249;/span&#8250;</span>;<br>
+										<span class="f">&#8249;span&#8250;</span> Приховати <span class="h">&#8249;/span&#8250;</span>;<br>
+										<span>&#8249;/button&#8250;</span> <br>
+										<span>&#8249;/div&#8250;</span>
+									</code></p>
+							</div>
+							<p>
+								<span>[JS]</span> У файлі <span>js/app.js</span> розкоментувати рядок <span>flsFunctions.showMore();</span>
+								<span>[SCSS]</span> Розкоментувати рядок <span>@import “base/showmore”;</span> у файлі <span>src/scss/base.scss</span> — це підключить базові стилі, відредагувати під свої потреби
+							</p>
+							<h2>Використання функціоналу</h2>
+							<p>
+								До елемента з атрибутом <span>data-showmore-content</span> додаємо текст та інший контент, або якщо це список (UL/OL) елементи списку (LI).
+							</p>
+							<p>
+								Залежно від того, який контент використовується (текст або елементи списку), вказуємо значення для атрибута
+								<span>data-showmore:</span>
+							</p>
+							<p>
+								<span>size</span>– обмеження по висоті блоку (за замовчуванням) <br>
+								<span>items</span> – обмеження кількості виведених елементів списку
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="b">&#8249;div data-showmore="items" class="block"&#8250;</span> <br>
+										<span class="b">&#8249;ul data-showmore-content class="block__content"&#8250; </span> <br>
+										<span class="f">&#8249;li&#8250;</span> Пункт №1 <span class="h">&#8249;/li&#8250;</span><br>
+										<span class="f">&#8249;li&#8250;</span> Пункт №2 <span class="h">&#8249;/li&#8250;</span><br>
+										<span class="f">&#8249;li&#8250;</span> Пункт №3 <span class="h">&#8249;/li&#8250;</span><br>
+										<span class="f">&#8249;li&#8250;</span> Пункт №4 <span class="h">&#8249;/li&#8250;</span><br>
+										<span class="f">&#8249;li&#8250;</span> Пункт №5 <span class="h">&#8249;/li&#8250;</span><br>
+										<span>&#8249;/div&#8250;</span> <br>
+										<span class="b">&#8249;button hidden data-showmore-button type="button" class="block__more"&#8250;</span> <br>
+										<span class="f">&#8249;span&#8250;</span> Показати ще <span class="h">&#8249;/span&#8250;</span>;<br>
+										<span class="f">&#8249;span&#8250;</span> Приховати <span class="h">&#8249;/span&#8250;</span>;<br>
+										<span>&#8249;/button&#8250;</span> <br>
+										<span>&#8249;/div&#8250;</span>
+									</code></p>
+							</div>
+							<p>
+								Залежно від того, який тип обрано, вказуємо значення для атрибуту data-showmore-content :
+							</p>
+							<p>
+								<span>Висота блоку у пікселях</span> (число без px, за замовчуванням 150) <br>
+								<span>Кількість виведених елементів списку</span> (число, за замовчуванням 3 )
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="b">&#8249;div data-showmore class="block"&#8250;</span> <br>
+										<span class="b">&#8249;div data-showmore-content="200" class="block__content"&#8250;</span> <br>
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis explicabo
+										voluptates magni culpa, perferendis vel quam consequuntur possimus,
+										vero placeat quo enim obcaecati quas, veritatis magnam non. Architecto,
+										porro voluptatum? <br>
+										<span class="b">&#8249;button hidden data-showmore-button type="button" class="block__more"&#8250;</span> <br>
+										<span class="f">&#8249;span&#8250;</span> Показати ще <span class="h">&#8249;/span&#8250;</span>;<br>
+										<span class="f">&#8249;span&#8250;</span> Приховати <span class="h">&#8249;/span&#8250;</span>;<br>
+										<span>&#8249;/button&#8250;</span> <br>
+										<span>&#8249;/div&#8250;</span>
+									</code></p>
+							</div>
+							<p>
+								Якщо контент буде меншим, ніж зазначене обмеження, кнопка “Показати ще” <span>не буде показана.</span> В іншому випадку, контент обмежиться за висотою або за кількістю елементів і при натисканні на кнопку буде показаний повністю, також, до елемента з атрибутом <span>data-showmore</span> додасться клас <span>_showmore-active</span> (перший спан в кнопці буде прихований, а другий показаний). Повторний клік поверне обмеження.
+							</p>
+							<p>
+								Є можливість керувати швидкістю розгортання контенту, для цього слід вказати значення атрибуту <span>data-showmore-button</span> у
+								мілісекундах (за замовчуванням 500):
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="b">&#8249;div data-showmore class="block"&#8250;</span> <br>
+										<span class="b">&#8249;div data-showmore-content="200" class="block__content"&#8250;</span> <br>
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis explicabo
+										voluptates magni culpa, perferendis vel quam consequuntur possimus,
+										vero placeat quo enim obcaecati quas, veritatis magnam non. Architecto,
+										porro voluptatum? <br>
+										<span class="b">&#8249;button hidden data-showmore-button="1000" type="button" class="block__more"&#8250;<br>
+											<span class="f">&#8249;span&#8250;</span> Показати ще <span class="h">&#8249;/span&#8250;</span>;<br>
+											<span class="f">&#8249;span&#8250;</span> Приховати <span class="h">&#8249;/span&#8250;</span>;<br>
+											<span>&#8249;/button&#8250;</span> <br>
+											<span>&#8249;/div&#8250;</span>
+									</code></p>
+							</div>
+							<br>
+							<h2>Увімкнення функціоналу на певній ширині екрану</h2>
+							<p>
+								Для того щоб використовувати функціонал на певній ширині екрана, до об’єкта з атрибутом data-showmore додаємо атрибут
+								<span>data-showmore-media</span> де, через кому, вказуємо потрібну ширину, а також тип:
+							</p>
+							<p>
+								<span>max</span> (за замовчуванням) – функціонал увімкнеться на ширині меншій ніж зазначена <br>
+								<span>min</span> – функціонал увімкнеться на ширині більшій ніж зазначена
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="b">&#8249;div data-showmore data-showmore-media="768,min" class="block"&#8250;</span> <br>
+										<span class="b">&#8249;div data-showmore-content="200" class="block__content"&#8250;</span> <br>
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis explicabo
+										voluptates magni culpa, perferendis vel quam consequuntur possimus,
+										vero placeat quo enim obcaecati quas, veritatis magnam non. Architecto,
+										porro voluptatum? <br>
+										<span class="b">&#8249;button hidden data-showmore-button="1000" type="button" class="block__more"<br>
+											<span class="f">&#8249;span&#8250;</span> Показати ще <span class="h">&#8249;/span&#8250;</span>;<br>
+											<span class="f">&#8249;span&#8250;</span> Приховати <span class="h">&#8249;/span&#8250;</span>;<br>
+											<span>&#8249;/button&#8250;</span> <br>
+											<span>&#8249;/div&#8250;</span>
+									</code></p>
+							</div>
+							<h2>Розташування та додаткові дані</h2>
+							<p>Функціонал знаходиться у <span>js/files/functions.js.</span> Назва функціі <span>showMore()</span></p>
+						</div>
+
+					</div>
+					<!-- ========================================= -->
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20241216071557"></script>
+	<script src="js/1.js?_v=20241216071557"></script>
+	<script src="js/2.js?_v=20241216071557"></script>
+	<script src="js/3.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js?_v=20241216071557"></script>
+</body>
+
+</html>
