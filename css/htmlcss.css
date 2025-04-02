@@ -1,0 +1,193 @@
+/* Контейнер для сторінки */
+.container-r {
+	max-width: 1225px;
+	margin: auto;
+}
+
+/* Кнопка "Додати" */
+#add-btn {
+	background-color: #007bff;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#add-btn:hover {
+	background-color: #0056b3;
+}
+
+/* Список елементів */
+#code-list {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1px;
+}
+
+.code-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	padding: 10px;
+	background: #919eab;
+	border: 2px solid #6cff51;
+	border-radius: 5px;
+	max-width: 620px;
+}
+.code-item img{
+	position: absolute;
+}
+
+/* Стиль для модального вікна */
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+
+.modal.hidden {
+	display: none;
+}
+
+/* Контент модального вікна */
+.modal-content__r {
+	background: #30323c;
+	padding: 20px;
+	border-radius: 5px;
+	width: 650px;
+	max-width: 90%;
+	/* Для адаптивності */
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	overflow-y: auto;
+	/* Додати скролл, якщо контент виходить за межі */
+	max-height: 90%;
+	/* Для адаптивності */
+}
+
+.modal-content__r h3 {
+	color: #ff8833;
+	margin-bottom: 10px;
+}
+
+textarea {
+	width: 100%;
+	height: 80px;
+	margin-bottom: 10px;
+	resize: none;
+}
+
+input[type="text"] {
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+/* Кнопка закриття модального вікна */
+.close {
+	color: red;
+		position: relative;
+		top: -20px;
+		right: -580px;
+		font-size: 40px;
+		cursor: pointer;
+}
+
+.close:hover {
+	color: #ff8833;
+}
+
+/* Кнопка видалення */
+.delete-btn {
+	background-color: #dc3545;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.delete-btn:hover {
+	background-color: #c82333;
+}
+
+.del {
+	display: flex;
+}
+
+.del h4 {
+	color: #000;
+	margin-left: 20px;
+}
+
+/* Заглушка */
+.placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 100px;
+	border-radius: 30%;
+	overflow: hidden;
+	
+	font-size: 24px;
+	font-weight: bold;
+	color: #999;
+	cursor: pointer;
+}
+
+.default-placeholder {
+	background-image: url(https://img.icons8.com/?size=100&id=48250&format=png&color=000000);
+	background-color: #71dbcc30;
+	margin-left: 20px;
+	color: #fff;
+}
+
+/* Медійні запити для адаптивності */
+@media (max-width: 768px) {
+	.modal-content__r {
+		width: 90%;
+		padding: 15px;
+	}
+
+	.close {
+		font-size: 25px;
+		top: 10px;
+		right: 10px;
+	}
+
+	#code-list {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.code-item {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	#add-btn {
+		width: 100%;
+		padding: 10px;
+		font-size: 16px;
+	}
+
+	textarea,
+	input[type="text"] {
+		font-size: 14px;
+	}
+}

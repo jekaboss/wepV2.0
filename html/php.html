@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>wep-Блокнот</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20241216071557">
+	<link rel="shortcut icon" href="../favicon.ico">
+
+	<link href="../css/php.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- Подключаем Prism.js -->
+	<!-- Prism.js CSS для подсветки синтаксиса -->
+	<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+
+	<!-- For JavaScript -->
+	<!-- Include other languages as needed -->
+
+	<meta name="robots" content="noindex, nofollow">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="het-men">
+					<a href="../main.html" class="header__logo"><img src="../img/logo.webp" width="50px" alt="logo"></a>
+					<article class="search">
+						<div class="icon"></div>
+						<form action="#" method="get" enctype="multipart/form-data" class="search__form">
+							<input type="text" id="searchInput" type="search" class="search__input" placeholder="Пошук">
+							<div id="searchResults"></div>
+						</form>
+						<!-- <input type="text" id="searchInput" placeholder="Введіть ваш запит...">
+				<div id="searchResults"></div> -->
+					</article>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="../html.html" class="menu__link">HTML</a></li>
+								<li class="menu__item"><a href="../css.html" class="menu__link">CSS</a></li>
+								<li class="menu__item"><a href="../scss.html" class="menu__link">SCSS</a></li>
+								<li class="menu__item"><a href="../JavaScript.html" class="menu__link">JavaScript</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">WordpRess</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">GIT</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="main__catalog catalog">
+				<div class="catalog__container">
+
+					<div data-spollers class="spollers">
+						<!-- ======== час і дата ======== -->
+						<div class="clock">
+							<p id="time"></p>
+							<p id="date"></p>
+						</div>
+						<!-- ========== календарь - заметки =================== -->
+						<div class="bloc__cale-not">
+							<!-- ====== календарь ======= -->
+							<div class="calendar">
+								<div class="calendar__header">
+									<button id="prev">‹</button>
+									<h1 id="monthYear"></h1>
+									<button id="next">›</button>
+								</div>
+								<div class="weekdays">
+									<div>ПН</div>
+									<div>ВТ</div>
+									<div>СР</div>
+									<div>ЧТ</div>
+									<div>ПТ</div>
+									<div>СБ</div>
+									<div>НД</div>
+								</div>
+								<div class="days" id="days"></div>
+							</div>
+					
+							<!-- <div class="cal">
+																		<a href="#">календарь</a>
+																	</div> -->
+							<!-- ========================================= -->
+							<!-- <div class="cal">
+																		<a href="#">заметки</a>
+																	</div> -->
+					
+							<!-- ========================================= -->
+							<details class="spollers__item">
+								<summary class="spollers__title">МЕНЮ</summary>
+								<div class="spollers__body">
+									<form class="filter__body">
+										<div class="filter__section section-filter">
+											<div class="section-filter__body">
+												<nav class="section-filter__menu menu-filter">
+													<ul class="menu-filter__list">
+														<li class="menu-filter__item">
+															<a class="menu-filter__link" href="html/documentation.html">Сборщик проектов Gulp 4</a>
+														</li>
+														<li class="menu-filter__item">
+															<a class="menu-filter__link" href="#">Сборщик проектов Vite</a>
+														</li>
+														<li class="menu-filter__item">
+															<a class="menu-filter__link" href="html/videolessons.html">Видео уроки</a>
+														</li>
+														<li class="menu-filter__item">
+															<a class="menu-filter__link" href="html/videoclass.html">мастер-клас</a>
+														</li>
+													</ul>
+												</nav>
+											</div>
+										</div>
+									</form>
+								</div>
+							</details>
+							<!-- ================= музичний плеєр ================= -->
+							<details class="spollers__item">
+								<summary class="spollers__title">Музичний плеєр</summary>
+								<div class="spollers__body">
+									<form class="filter__body">
+										<div class="filter__section section-filter">
+											<div class="section-filter__body">
+												<nav class="section-filter__menu menu-filter">
+													<div class="player">
+					
+														<audio id="audio" controls>
+															<source src="music.mp3" type="audio/mpeg">
+															Ваш браузер не підтримує аудіо елемент.
+														</audio>
+														<div class="controls">
+															<button id="playPauseBtn">▶️</button>
+															<button id="stopBtn">⏹️</button>
+															<button id="prevBtn">⏮️</button>
+															<button id="nextBtn">⏭️</button>
+														</div>
+														<div class="playlist">
+															<ul id="playlist">
+																<li data-src="https://d1.ukrsong.com/mp3/2025-01/1736981111_parfeniuk-vrubay.mp3">Parfeniuk</li>
+																<li data-src="https://d1.ukrsong.com/mp3/2025-01/1736981230_drevo-vdoma-napvgola.mp3">Drevo</li>
+																<li data-src="https://d1.ukrsong.com/mp3/2025-01/1736981450_ustym-buk-u-vogn.mp3">Ustym Buk</li>
+															</ul>
+														</div>
+													</div>
+												</nav>
+											</div>
+										</div>
+									</form>
+								</div>
+							</details>
+					
+					
+						</div>
+					
+					</div>
+
+					<div class="catalog__body">
+
+						<!-- ===========================  Завантаження коду react ================================== -->
+						<div class="container_r">
+							<button id="openModalBtn" class="btn primary-btn">Додати код</button>
+						
+							<div id="modal" class="modal">
+								<div class="modal-content_r">
+									<span id="closeModalBtn" class="close-btn">&times;</span>
+									<h2>Додати код</h2>
+									<input type="text" id="nameInput" placeholder="Назва" class="input-field">
+									<textarea id="codeInput" placeholder="Введіть код" class="input-field"></textarea>
+									<button id="saveBtn" class="btn primary-btn">Зберегти</button>
+									<button id="updateBtn" class="btn primary-btn" style="display:none;">Оновити</button>
+								</div>
+							</div>
+						
+							<div id="codesContainer" class="codes-container"></div>
+						</div>
+						<!-- =============================================================================== -->
+
+					</div>
+					<!-- ========================================= -->
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="../js/php.js"></script>
+	<script src="../js/app.js"></script>
+
+	<!-- <script src="js/app.min.js?_v=20241216071557"></script> -->
+	<!-- <script src="js/1.js?_v=20241216071557"></script> -->
+	<!-- <script src="js/2.js?_v=20241216071557"></script> -->
+	<!-- <script src="js/3.js?_v=20241216071557"></script> -->
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js?_v=20241216071557"></script> -->
+
+	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</body>
+
+</html>

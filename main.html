@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>wep-Блокнот</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+
+	<div class="video-background">
+		<video autoplay muted loop playsinline id="background-video">
+			<source src="img/video/mat9.mp4" type="video/mp4">
+		</video>
+	</div>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="het-men">
+					<a href="../main.html" class="header__logo"><img src="img/logo.webp" width="50px" alt="logo"></a>
+<!-- ============================================================================== -->
+			
+<!-- ============================================================================== -->
+					<article class="search search__form">
+						<div class="icon"></div>
+						<form action="#" method="get" enctype="multipart/form-data" class="search__form">
+							<input type="text" id="searchInput" type="search" class="search__input" placeholder="Пошук">
+							<div id="searchResults"></div>
+							<button id="searchButton">Искать</button>
+						</form>
+					</article>
+<!-- ============================================================================== -->
+					
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list" id="itemList">
+								<li class="menu__item"><a href="header/html.html" class="menu__link">HTML</a></li>
+								<li class="menu__item"><a href="header/css.html" class="menu__link">CSS</a></li>
+								<li class="menu__item"><a href="header/scss.html" class="menu__link">SCSS</a></li>
+								<li class="menu__item"><a href="header/JavaScript.html" class="menu__link">JavaScript</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">WordpRess</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">GIT</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="main__catalog catalog">
+				<div class="catalog__container">
+
+					<div data-spollers class="spollers">
+						<!-- ======== час і дата ======== -->
+						<div class="clock">
+							<p id="time"></p>
+							<p id="date"></p>
+						</div>
+						<!-- ========== календарь - заметки =================== -->
+						<div class="bloc__cale-not">
+							<!-- ====== календарь ======= -->
+							<div class="calendar">
+								<div class="calendar__header">
+									<button id="prev">‹</button>
+									<h1 id="monthYear"></h1>
+									<button id="next">›</button>
+								</div>
+								<div class="weekdays">
+									<div>ПН</div>
+									<div>ВТ</div>
+									<div>СР</div>
+									<div>ЧТ</div>
+									<div>ПТ</div>
+									<div>СБ</div>
+									<div>НД</div>
+								</div>
+								<div class="days" id="days"></div>
+							</div>
+							
+							<!-- <div class="cal">
+								<a href="#">календарь</a>
+							</div> -->
+							<!-- ========================================= -->
+							<!-- <div class="cal">
+								<a href="#">заметки</a>
+							</div> -->
+							
+							<!-- ========================================= -->
+							<details class="spollers__item">
+								<summary class="spollers__title">МЕНЮ</summary>
+								<div class="spollers__body">
+									<form class="filter__body">
+										<div class="filter__section section-filter">
+											<div class="section-filter__body">
+												<nav class="section-filter__menu menu-filter">
+													<ul class="menu-filter__list">
+														<li class="menu-filter__item">
+															<a class="menu-filter__link" href="html/documentation.html">Сборщик проектов Gulp 4</a>
+														</li>
+														<li class="menu-filter__item">
+															<a class="menu-filter__link" href="#">Сборщик проектов Vite</a>
+														</li>
+														<li class="menu-filter__item">
+															<a class="menu-filter__link" href="html/videolessons.html">Видео уроки</a>
+														</li>
+														<li class="menu-filter__item">
+															<a class="menu-filter__link" href="html/videoclass.html">мастер-клас</a>
+														</li>
+													</ul>
+												</nav>
+											</div>
+										</div>
+									</form>
+								</div>
+							</details>
+							<!-- ================= музичний плеєр ================= -->
+							<details class="spollers__item">
+								<summary class="spollers__title">Музичний плеєр</summary>
+								<div class="spollers__body">
+									<form class="filter__body">
+										<div class="filter__section section-filter">
+											<div class="section-filter__body">
+												<nav class="section-filter__menu menu-filter">
+													<div class="player">
+														
+														<audio id="audio" controls>
+															<source src="music.mp3" type="audio/mpeg">
+															Ваш браузер не підтримує аудіо елемент.
+														</audio>
+														<div class="controls">
+															<button id="playPauseBtn">▶️</button>
+															<button id="stopBtn">⏹️</button>
+															<button id="prevBtn">⏮️</button>
+															<button id="nextBtn">⏭️</button>
+														</div>
+														<div class="playlist">
+															<ul id="playlist">
+																<li data-src="https://d1.ukrsong.com/mp3/2025-01/1736981111_parfeniuk-vrubay.mp3">Parfeniuk</li>
+																<li data-src="https://d1.ukrsong.com/mp3/2025-01/1736981230_drevo-vdoma-napvgola.mp3">Drevo</li>
+																<li data-src="https://d1.ukrsong.com/mp3/2025-01/1736981450_ustym-buk-u-vogn.mp3">Ustym Buk</li>
+															</ul>
+														</div>
+													</div>
+												</nav>
+											</div>
+										</div>
+									</form>
+								</div>
+							</details>
+						</div>
+					</div>
+
+					<!-- ===========================  ривень 1 ================================== -->
+					<div class="catalog__body">
+						<div class="catalog__header">
+							<h1 class="catalog__title">Рішеня</h1>
+						</div>
+						<div class="catalog__items">
+							<!-- <a href="html/myrobots.html">
+								<img src="img/9_1.webp" width="130" height="130" alt="Image">
+								<p>моі роботи</p>
+							</a> -->
+							<a href="html/htmlcss.html">
+								<img src="img/image1.webp" width="100" height="100" alt="Image">
+								<p>HTML CSS</p>
+							</a>
+							<a href="html/js.html">
+								<img src="img/image2.webp" width="100" height="100" alt="Image">
+								<p>JavaScript</p>
+							</a>
+							<a href="html/react.html">
+								<img src="img/image3.webp" width="100" height="100" alt="Image">
+								<p>React</p>
+							</a>
+							<a href="html/php.html">
+								<img src="img/image4.webp" width="100" height="100" alt="Image">
+								<p>php</p>
+							</a>
+							<a href="#">
+								<img src="img/image5.webp" width="100" height="100" alt="Image">
+								<p>WordpRess</p>
+							</a>
+							<a href="https://upgraded-space-cod-jw5rrqg9q59hqgpg.github.dev/" target="_blank">
+								<img src="img/vscode.png" width="100" height="100" alt="vscode">
+								<p>vs Code</p>
+							</a>
+							<a href="https://stackblitz.com/" target="_blank">
+								<img src="img/mon.webp" width="100" height="100" alt="stackblitz">
+								<p>stackblitz</p>
+							</a>
+							<a href="https://github.com" target="_blank">
+								<img src="img/github.png" width="100" height="100" alt="github">
+								<p>github</p>
+							</a>
+
+						</div>
+						<hr>
+						<!-- ===========================  ривень 2 ================================== -->
+						<div class="videomodal__vid">
+							<a href="https://fish-flute-4d3.notion.site/ed45efc8d6e94249865076650fcddd25?v=b1e6974b796247f0a04a0ee3a3e396b0" target="_blank">Нотатки (Оcінь 2023)</a>
+							<a href="https://fls.guru/" target="_blank">шпаргалка ( Фрилансер по життю )</a>
+							<a href="https://yhub.net/admin/dashboard" target="_blank">Безплатний розмишеня свого сайта</a>
+							<a href="https://chatgpt.com/" target="_blank">чат GPT</a>
+							<a href="https://chat.deepseek.com/" target="_blank">чат Deepseek</a>
+							<a href="https://grok.com/" target="_blank">чат Grik</a>
+							<a href="https://chat.qwen.ai/" target="_blank">чат Qwen</a>
+							<a href="https://app.leadteh.ru/projects/6e016db6-a2d4-45de-9a9d-5e9c5cb468e8" target="_blank">создания чат бота</a>
+							<a href="https://ru.pinterest.com/" target="_blank">pinterest</a>
+							<a href="https://www.udemy.com/" target="_blank">udemy</a>
+						</div>
+						<hr>
+						<!-- ===========================  ривень 3 ================================== -->
+
+						<div class="blok__menu-net">
+
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title">проверка сайтов</summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="https://pagespeed.web.dev/" target="_blank">PageSpeed Insights</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://validator.w3.org/" target="_blank">виявляє html код <br> на помилки</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://caninclude.glitch.me/" target="_blank">caninclude</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validation Service</a>
+															</li>
+
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title">слайдери</summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="https://swiperjs.com/" target="_blank">swiperjs</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://kenwheeler.github.io/slick/" target="_blank">kenwheeler</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://splidejs.com/" target="_blank">splidejs</a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title">библиотека</summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="https://developers.google.com/speed/libraries?hl=ru" target="_blank">Библиотеки Google</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://releases.jquery.com/" target="_blank">jquery.com</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://cdnjs.com/libraries/normalize" target="_blank">cdnjs.com</a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title">робота з макетами</summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="https://www.figma.com/files/team/972367394726786034/recents-and-sharing?fuid=972367388857495518"
+																	target="_blank">figma</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://pixso.net/user/login/?response_type=none&redirect_uri=https%3A%2F%2Fpixso.net%2Fapp%2Fdrafts&from=1&product=pixso&ux_mode=redirect"
+																	target="_blank">pixso</a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+
+						</div>
+
+						<div class="blok__menu-net">
+						
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title">генератори 1</summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="https://cssgrid-generator.netlify.app/" target="_blank">CSS Grid Generator</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://transfonter.org/" target="_blank">генератор шрифтив</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://www.plantcss.com/blog/how-to-make-rounded-corners-when-using-css-clip-path"
+																	target="_blank">plantcss</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://www.imgonline.com.ua/favicon-ico-for-website.php" target="_blank">IMGonline.com.ua</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://www.svgrepo.com/" target="_blank">безкоштовних іконок</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://css.gg/icon/add" target="_blank">сайт де показані <br> різні іконки для <br> стилізації сайту</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://yoksel.github.io/html-tree/en/" target="_blank">генератор html-дерева</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://chir.ag/projects/name-that-color/#6195ED" target="_blank">який допомагає з <br> назвами кольорів</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode" target="_blank">згенерувати
+																	сніпети</a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+						
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title">генератори 2</summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="https://coolors.co/" target="_blank">генеруємо кольорові</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://keyframes.app/animate" target="_blank">можна зробити <br> комплексні анімації <br> з окремими
+																	кроками</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://animista.net/" target="_blank">заготовлені анімації</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://cssgradient.io/" target="_blank">можна зробити градієнти</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://cssgrid-generator.netlify.app/" target="_blank">можна генерити гріди</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://cssflex-generator.netlify.app/" target="_blank">генеримо флекси</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://getwaves.io/" target="_blank">робимо хвильки</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://www.cssportal.com/css-animated-text-generator/" target="_blank">ціла купа різних <br> генераторів</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://xn--80adth0aefm3i.xn--j1amh/HTML" target="_blank">довідка по тегах</a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+						
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title">корисні посилання 1</summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="https://html.spec.whatwg.org/" target="_blank">специфікація HTML5</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://code.visualstudio.com/" target="_blank">Посилання на VS Code</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://htmlreference.io/" target="_blank">HTML</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://cssreference.io/" target="_blank">CSS</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://www.w3schools.com/" target="_blank">загальноосвітній</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://caniuse.com/" target="_blank">зрозуміти як <br> працює властивість</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://codepen.io/" target="_blank">корисний сайт <br> для практики</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://learn.microsoft.com/en-us/sysinternals/downloads/zoomit?WT.mc_id=-blog-scottha"
+																	target="_blank">Програма для <br> малювання</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://www.freecodecamp.org/learn" target="_blank">Безкоштовна платформа <br> для вивчення <br> чималих
+																	тем</a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title">корисні посилання 2</summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="#" target="_blank"></a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+						
+						</div>
+
+						<div class="blok__menu-net">
+						
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title">фрилан биржи</summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="https://freelancehunt.com/ua/profile/login?to=%2Fmy" target="_blank">freelancehunt</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://www.weblancer.net/" target="_blank">weblancer</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://freelance.ua/ru/" target="_blank">freelance.ua</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://kabanchik.ua/ua/dnipro" target="_blank">kabanchik</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://www.upwork.com/" target="_blank">upwork</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://www.fiverr.com/" target="_blank">fiverr</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://justjoin.it/" target="_blank">зарубежни вакансиї</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://recruitika.com/" target="_blank">вакансиї</a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+						
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title">хостинг</summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="https://www.zzz.com.ua/panel/uk/main" target="_blank">www.zzz.com.ua</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://www.ukraine.com.ua/" target="_blank">www.ukraine.com.ua</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://link-host.net/hosting/" target="_blank">link-host.net</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://hostiq.ua/ukr/" target="_blank">hostiq.ua</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://thehost.ua/" target="_blank">thehost.ua</a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+						
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title"></summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="#" target="_blank"></a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+						
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title"></summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="#" target="_blank"></a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+						
+						</div>
+
+						<div class="blok__menu-net">
+						
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title"></summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="#" target="_blank"></a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+						
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title"></summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="#" target="_blank"></a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+						
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title"></summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="#" target="_blank"></a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+						
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title"></summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="#" target="_blank"></a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+						
+						</div>
+
+
+						<hr>
+						<!-- ===========================  ривень 4 ================================== -->
+						<div class="catalog__header">
+							<h1 class="catalog__title">ігри для програмистов</h1>
+						</div>
+						<div class="blok__menu-net">
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title">відео</summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="https://www.youtube.com/watch?v=Ci117QSuZH4" target="_blank">Эти игры помогают изучать
+																	программирования</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://www.youtube.com/watch?v=NBJgnlxiF7E" target="_blank">Лучшие игры для <br>
+																	ОБУЧЕНИЯ
+																	ПРОГРАММИРОВАНИЮ</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://www.youtube.com/watch?v=5apqhV0EuDM" target="_blank">Как научиться
+																	программировать с нуля играя в игры. Java, JavaScript, C++, C#, Python, PHP, Ruby</a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title">ігри</summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="https://codecombat.com/" target="_blank">codecombat</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://www.codingame.com/start/" target="_blank">codingame</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="http://www.flexboxdefense.com/" target="_blank">flexbox defense</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://flukeout.github.io/" target="_blank">css diner</a>
+															</li>
+															<li class="menu-filter__item">
+																<a href="https://danielyxie.github.io/bitburner/" target="_blank">Bitburner (js)</a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title"></summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="#" target="_blank"></a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+
+							<div data-spollers class="spollers">
+								<details class="spollers__item item__spollers">
+									<summary class="spollers__title"></summary>
+									<div class="spollers__body">
+										<form class="filter__body">
+											<div class="filter__section section-filter">
+												<div class="section-filter__body">
+													<nav class="section-filter__menu menu-filter">
+														<ul class="menu-filter__list">
+															<li class="menu-filter__item">
+																<a href="#" target="_blank"></a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</form>
+									</div>
+								</details>
+							</div>
+
+						</div>
+						<!-- ===========================  ривень 5 ================================== -->
+					</div>
+					<!-- ========================================= -->
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__logo">
+					<p>wep-блокнот © 2025</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/app.js"></script>
+	<script src="js/search.js"></script>
+	
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js?_v=20241216071557"></script> -->
+</body>
+
+</html>

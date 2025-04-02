@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Form</title>
+	<style>
+		body {
+			font-family: 'Roboto', sans-serif;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			background: linear-gradient(135deg, #667eea, #764ba2);
+			color: #fff;
+		}
+
+		.login-container {
+			background: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(10px);
+			padding: 30px;
+			border-radius: 12px;
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+			width: 350px;
+			text-align: center;
+		}
+
+		.login-container h2 {
+			margin-bottom: 20px;
+			font-size: 28px;
+			color: #fff;
+		}
+
+		.form-group {
+			margin-bottom: 20px;
+		}
+
+		.form-group label {
+			display: block;
+			margin-bottom: 8px;
+			font-size: 14px;
+		}
+
+		.form-group input {
+			width: 93%;
+			padding: 12px;
+			font-size: 16px;
+			border: none;
+			border-radius: 8px;
+			outline: none;
+			background: rgba(255, 255, 255, 0.2);
+			color: #fff;
+		}
+
+		.form-group input::placeholder {
+			color: rgba(255, 255, 255, 0.7);
+		}
+
+		.captcha-group {
+			margin: 20px 0;
+		}
+
+		.captcha {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 10px;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.captcha img {
+			border-radius: 5px;
+			background-color: #fff;
+			padding: 5px;
+			height: 50px;
+			width: auto;
+		}
+
+		.login-btn {
+			width: 100%;
+			padding: 12px;
+			font-size: 16px;
+			color: #fff;
+			background: linear-gradient(135deg, #667eea, #764ba2);
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: background 0.3s ease;
+		}
+
+		.login-btn:hover {
+			background: linear-gradient(135deg, #764ba2, #667eea);
+		}
+
+		.error {
+			color: #ff6b6b;
+			font-size: 14px;
+			margin-top: 15px;
+		}
+		.forgot-password {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .forgot-password a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+	</style>
+</head>
+
+<body>
+	<div class="login-container">
+		<h2>Ласкаво просимо</h2>
+		<form id="loginForm">
+			<div class="form-group">
+				<!-- <label for="username">Username</label> -->
+				<input type="text" id="username" name="username" placeholder="Введите свое имя пользователя" required>
+			</div>
+			<div class="form-group">
+				<!-- <label for="password">Password</label> -->
+				<input type="password" id="password" name="password" placeholder="Введите свой пароль" required>
+			</div>
+			<div class="captcha-group">
+				<div class="captcha">
+					<img id="captchaImage" alt="Captcha">
+					<button type="button" onclick="refreshCaptcha()">Refresh</button>
+				</div>
+				<input type="text" id="captchaInput" placeholder="Введите капчу" required>
+			</div>
+			<button type="submit" class="login-btn">Вхід</button>
+			<div class="error" id="errorMessage"></div>
+		</form>
+		<div class="forgot-password">
+			<p>Forgot your password? <a href="#" onclick="recoverPassword()">Recover it here</a></p>
+		</div>
+	</div>
+
+	<script>
+		const loginForm = document.getElementById('loginForm');
+			const errorMessage = document.getElementById('errorMessage');
+			const captchaImage = document.getElementById('captchaImage');
+			const captchaInput = document.getElementById('captchaInput');
+
+			const validUsername = '1';
+			const validPassword = '1';
+			let currentCaptcha = '';
+
+			function generateCaptcha() {
+				const characters = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
+				let captcha = '';
+				for (let i = 0; i < 5; i++) {
+					captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+				}
+				return captcha;
+			}
+
+			function refreshCaptcha() {
+				currentCaptcha = generateCaptcha();
+				const svgCaptcha = `<svg xmlns='http://www.w3.org/2000/svg' height='50' width='150' style='background:#764ba2;fill:#fff;font-family:Arial;font-size:28px;text-anchor:middle'><text x='50%' y='35'>${currentCaptcha}</text></svg>`;
+				captchaImage.src = `data:image/svg+xml;base64,${btoa(svgCaptcha)}`;
+			}
+
+			loginForm.addEventListener('submit', function (event) {
+				event.preventDefault();
+
+				const username = document.getElementById('username').value;
+				const password = document.getElementById('password').value;
+
+				if (username === validUsername && password === validPassword) {
+					if (captchaInput.value === currentCaptcha) {
+						window.location.href = 'main.html';
+					} else {
+						errorMessage.textContent = 'Invalid captcha';
+					}
+				} else {
+					errorMessage.textContent = 'Invalid username or password';
+				}
+			});
+
+			function recoverPassword() {
+				const recoveryMethod = prompt('Enter your recovery method (email/phone/telegram):').toLowerCase();
+				let contactInfo;
+
+				switch (recoveryMethod) {
+					case 'email':
+						contactInfo = prompt('Please enter your email address:');
+						if (validateEmail(contactInfo)) {
+							alert(`Recovery instructions have been sent to ${contactInfo}`);
+						} else {
+							alert('Invalid email format.');
+						}
+						break;
+					case 'phone':
+						contactInfo = prompt('Please enter your phone number:');
+						if (validatePhone(contactInfo)) {
+							alert(`A recovery SMS has been sent to ${contactInfo}`);
+						} else {
+							alert('Invalid phone number format.');
+						}
+						break;
+					case 'telegram':
+						contactInfo = prompt('Please enter your Telegram username:');
+						if (contactInfo) {
+							alert(`Recovery instructions have been sent to @${contactInfo} on Telegram`);
+						} else {
+							alert('Invalid Telegram username.');
+						}
+						break;
+					default:
+						alert('Invalid recovery method selected.');
+				}
+			}
+
+			function validateEmail(email) {
+				const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+				return re.test(email);
+			}
+
+			function validatePhone(phone) {
+				const re = /^\+?[1-9]\d{1,14}$/;
+				return re.test(phone);
+			}
+
+			refreshCaptcha();
+	</script>
+</body>
+
+</html>

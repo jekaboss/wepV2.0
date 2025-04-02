@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>wep-шпаргалка</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="../css/style.min.css?_v=20241216071557">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- Подключаем Prism.js -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css?_v=20241216071557" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css?_v=20241216071557" rel="stylesheet" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="het-men">
+					<a href="../index.html" class="header__logo"><img src="../img/logo.webp" width="50px" alt="logo"></a>
+					<article class="search">
+						<div class="icon"></div>
+						<form action="#" method="get" enctype="multipart/form-data" class="search__form">
+							<input type="text" id="searchInput" type="search" class="search__input" placeholder="Пошук">
+							<div id="searchResults"></div>
+						</form>
+						<!-- <input type="text" id="searchInput" placeholder="Введіть ваш запит...">
+				<div id="searchResults"></div> -->
+					</article>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="../html.html" class="menu__link">HTML</a></li>
+								<li class="menu__item"><a href="../css.html" class="menu__link">CSS</a></li>
+								<li class="menu__item"><a href="../scss.html" class="menu__link">SCSS</a></li>
+								<li class="menu__item"><a href="../JavaScript.html" class="menu__link">JavaScript</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">WordpRess</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">GIT</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="main__catalog catalog">
+				<div class="catalog__container">
+					<div data-spollers class="spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title">МЕНЮ</summary>
+							<div class="spollers__body">
+								<form class="filter__body">
+									<div class="filter__section section-filter">
+										<div class="section-filter__body">
+											<nav class="section-filter__menu menu-filter">
+												<ul class="menu-filter__list">
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="documentation.html">Сборщик проектов Gulp 4</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="videolessons.html">Видео уроки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Роботи верски сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Пример кода</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Заготовки</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">названия классов HTML/CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка адаптивности</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Grid CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Шпаргалка по Flexbox CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Верстка сайтив</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Претпроцесор SCSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Tailwind CSS</a>
+													</li>
+													<li class="menu-filter__item">
+														<a class="menu-filter__link" href="#">Курс по Frontend разработке</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</form>
+							</div>
+						</details>
+					</div>
+					<!-- ========================================= -->
+					<div class="catalog__body">
+						<div class="catalog__header">
+							<h1 class="catalog__title">Модуль “Спостерігач” за появою елементів під час прокручування сторінки (скролі)</h1>
+						</div>
+
+						<div class="catalog__text">
+							<p>
+								Модуль “Спостерігач” можна використовувати для вирішення різних завдань: анімація елементів при скролі, підсвічування
+								активного пункту меню (використовується в модулі “Прокручування до потрібного блоку”) та багатьох інших.
+							</p>
+							<p>
+								Суть роботи спостерігача полягає в додаванні класу <span>_watcher-view</span> елементу в момент його появи у в’юпорті (екрані) при
+								скролі та при відкритті сторінки. І, відповідно, прибраний при відході об’єкта з в’юпорту.
+							</p>
+							<h2>Підключення модуля</h2>
+							<p>
+								<span>[HTML]</span> Для об’єкта, за яким потрібно встановити спостереження, слід додати атрибут <span>data-watch</span>
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="f"> &#8249;div data-watch class="block"&#8250;</span><span class="h"> </span><br> <br>
+										.... <br> <br>
+										<span class="f"> &#8249;/div&#8250;</span>
+									</code></p>
+							</div>
+							<p>
+								<span>[JS]</span> У файлі <span>js/app.js</span> розкоментувати рядок import <span>‘./libs/watcher.js’</span>
+							</p>
+							<h2>Додаткові налаштування:</h2>
+							<p>
+								&#9989;<span>data-watch-root=’селектор’</span> – селектор батька всередині якого спостерігатиме за об’єктом. За замовчуванням &#8249;body&#8250; <br> <br>
+								&#9989; <span>data-watch-margin=’значення’</span> – відступ від батька. Вказуємо значення у PX або у % <br> <br>
+								&#9989; <span>data-watch-threshold=’значення’</span> – відсоток показу об’єкта для спрацьовування. Де 1 = 100% показ об’єкта. Вказуємо лише цілі чи десяткові числа, за замовчуванням 0. Може містити масив значень через кому. <br> <br>
+								&#9989; <span>data-watch-once</span> – спостерігати лише один раз. Тобто клас до об’єкта додасться тільки один раз і не буде прибраний при виході з в’юпорту.
+							</p>
+							<p>
+								<span>Приклад – клас додасться лише один раз, з появою об’єкта на 50% його висоти:</span>
+							</p>
+							<div class="m">
+								<p><code>
+										<span class="f"> &#8249;div data-watch-threshold="0.5" data-watch-once data-watch class="block"&#8250;</span><span class="h"> </span><br> <br>
+										.... <br> <br>
+										<span class="f"> &#8249;/div&#8250;</span>
+									</code></p>
+							</div>
+							<br>
+							<h2>Події</h2>
+							<p>
+								Після кожного спрацювання спостерігача виникає подія <span>watcherСallback</span>, його можна відловити в будь-якій частині коду:
+							</p>
+							<img class="img__image ibg" src="img/it/04.webp" alt="Image">
+							<h2>Розташування та додаткові дані</h2>
+							<p>
+								Функціонал міститься у файлі <span>js/libs/watcher.js</span>. Назва класу <span>ScrollWatcher</span>. Модуль побудований на основі Intersection <span><a href="https://developer.mozilla.org/ru/docs/Web/API/Intersection_Observer_API">Observer API.</a></span>
+							</p>
+							<p>
+								Модуль забезпечений системою <span>FLS</span> і повідомлятиме про свої дії в консоль браузера
+							</p>
+						</div>
+
+					</div>
+					<!-- ========================================= -->
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20241216071557"></script>
+	<script src="js/1.js?_v=20241216071557"></script>
+	<script src="js/2.js?_v=20241216071557"></script>
+	<script src="js/3.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js?_v=20241216071557"></script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>wep-шпаргалка</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20241216071557">
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- Подключаем Prism.js -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css?_v=20241216071557" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css?_v=20241216071557" rel="stylesheet" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="het-men">
+					<a href="../main.html" class="header__logo"><img src="../img/logo.webp" width="50px" alt="logo"></a>
+					<article class="search">
+						<div class="icon"></div>
+						<form action="#" method="get" enctype="multipart/form-data" class="search__form">
+							<input type="text" id="searchInput" type="search" class="search__input" placeholder="Пошук">
+							<div id="searchResults"></div>
+						</form>
+						<!-- <input type="text" id="searchInput" placeholder="Введіть ваш запит...">
+				<div id="searchResults"></div> -->
+					</article>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="../html.html" class="menu__link">HTML</a></li>
+								<li class="menu__item"><a href="../css.html" class="menu__link">CSS</a></li>
+								<li class="menu__item"><a href="../scss.html" class="menu__link">SCSS</a></li>
+								<li class="menu__item"><a href="../JavaScript.html" class="menu__link">JavaScript</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">WordpRess</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">GIT</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="main__catalog catalog">
+				<div class="catalog__container">
+
+					<div data-spollers class="spollers">
+						<!-- ======== час і дата ======== -->
+						<div class="clock">
+							<p id="time"></p>
+							<p id="date"></p>
+						</div>
+						<!-- ========== календарь - заметки =================== -->
+						<div class="bloc__cale-not">
+							<!-- ====== календарь ======= -->
+							<div class="calendar">
+								<div class="calendar__header">
+									<button id="prev">‹</button>
+									<h1 id="monthYear"></h1>
+									<button id="next">›</button>
+								</div>
+								<div class="weekdays">
+									<div>ПН</div>
+									<div>ВТ</div>
+									<div>СР</div>
+									<div>ЧТ</div>
+									<div>ПТ</div>
+									<div>СБ</div>
+									<div>НД</div>
+								</div>
+								<div class="days" id="days"></div>
+							</div>
+					
+							<!-- <div class="cal">
+																							<a href="#">календарь</a>
+																						</div> -->
+							<!-- ========================================= -->
+							<!-- <div class="cal">
+																							<a href="#">заметки</a>
+																						</div> -->
+					
+							<!-- ========================================= -->
+							<details class="spollers__item">
+								<summary class="spollers__title">МЕНЮ</summary>
+								<div class="spollers__body">
+									<form class="filter__body">
+										<div class="filter__section section-filter">
+											<div class="section-filter__body">
+												<nav class="section-filter__menu menu-filter">
+													<ul class="menu-filter__list">
+														<li class="menu-filter__item">
+															<a class="menu-filter__link" href="html/documentation.html">Сборщик проектов Gulp 4</a>
+														</li>
+														<li class="menu-filter__item">
+															<a class="menu-filter__link" href="#">Сборщик проектов Vite</a>
+														</li>
+														<li class="menu-filter__item">
+															<a class="menu-filter__link" href="html/videolessons.html">Видео уроки</a>
+														</li>
+														<li class="menu-filter__item">
+															<a class="menu-filter__link" href="html/videoclass.html">мастер-клас</a>
+														</li>
+													</ul>
+												</nav>
+											</div>
+										</div>
+									</form>
+								</div>
+							</details>
+							<!-- ================= музичний плеєр ================= -->
+							<details class="spollers__item">
+								<summary class="spollers__title">Музичний плеєр</summary>
+								<div class="spollers__body">
+									<form class="filter__body">
+										<div class="filter__section section-filter">
+											<div class="section-filter__body">
+												<nav class="section-filter__menu menu-filter">
+													<div class="player">
+					
+														<audio id="audio" controls>
+															<source src="music.mp3" type="audio/mpeg">
+															Ваш браузер не підтримує аудіо елемент.
+														</audio>
+														<div class="controls">
+															<button id="playPauseBtn">▶️</button>
+															<button id="stopBtn">⏹️</button>
+															<button id="prevBtn">⏮️</button>
+															<button id="nextBtn">⏭️</button>
+														</div>
+														<div class="playlist">
+															<ul id="playlist">
+																<li data-src="https://d1.ukrsong.com/mp3/2025-01/1736981111_parfeniuk-vrubay.mp3">Parfeniuk</li>
+																<li data-src="https://d1.ukrsong.com/mp3/2025-01/1736981230_drevo-vdoma-napvgola.mp3">Drevo</li>
+																<li data-src="https://d1.ukrsong.com/mp3/2025-01/1736981450_ustym-buk-u-vogn.mp3">Ustym Buk</li>
+															</ul>
+														</div>
+													</div>
+												</nav>
+											</div>
+										</div>
+									</form>
+								</div>
+							</details>
+					
+					
+						</div>
+					
+					</div>
+
+					<!-- ========================================= -->
+					<div class="catalog__body">
+						<div class="catalog__header">
+							<h1 class="catalog__title">Видео уроки</h1>
+						</div>
+						<div class="catalog__items">
+							<!-- =============================== -->
+							<div class="videomodal">
+
+								<div class="videomodal__vid">
+									<a href="https://www.youtube.com/embed/nx2TWEKgnpQ?si=oLQcKDBDW_9DPWmU">Урок 1 Знайомство</a>
+									<hr>
+									<a href="https://www.youtube.com/embed/0pVoX8O5kOU?si=6FtLgk7lmn5T1xHd">Урок 2 Файлова структура проекту знайомство з html</a>
+									<a href="https://www.youtube.com/embed/keWvh8rHHxE?si=dDMmhdfrgJSaq3qd">Урок 3 Повторення HTML,HTML-Вкладенисть, Основи CSS</a>
+									<a href="https://www.youtube.com/embed/qC8u7m4zyoo?si=Q0KrHfUnBWp_d1JC">Урок 4 css - синтаксис та селектори</a>
+									<a href="https://www.youtube.com/embed/8K_hbOQDxyE?si=fRwC47AiwkeOtfE8">Урок 5 основи роботи з figma, пидключеня шрифтив, css властивости шрифтив та тексту</a>
+									<a href="https://www.youtube.com/embed/HmSBRSqimiM?si=lvqoF0EqmwZKvb4i">Урок 6 css - властивости блокив</a>
+									<a href="https://www.youtube.com/embed/iQdtilEeMwo?si=WSowJ37L65Gs3Ys8">Урок 7 css - властивости оформленя блокив</a>
+									<a href="https://www.youtube.com/embed/79h_uyOLo_4?si=pp1Aarj6Lddhz62o">Урок 8 css - властивости background</a>
+									<a href="https://www.youtube.com/embed/wT3WnsITwG4?si=jJSByvrjTNup8Ha5">Урок 9 ( Псевдокласи та псевдоелементи )</a>
+									<a href="https://www.youtube.com/embed/10ZDc6tLyII?si=QCiwgb8mVtNZjgVk">Урок 10 ( web-графика )................</a>
+									<a href="https://www.youtube.com/embed/JcAmb9DDop8?si=i9omcfIglakQKjfh">Урок 11 ( Методология БЄМ )...................</a>
+									<a href="https://www.youtube.com/embed/I2H1Hk5rHKo?si=Y0zBqD1Zu-RCfOJd">Урок 12 ( Позеционування ).........</a>
+									<a href="https://www.youtube.com/embed/2tWt5xckJBM?si=c4LclM2XCJ9MWWId">Урок 13 ( css транформации )........</a>
+									<a href="https://www.youtube.com/embed/wfWUSaphA6c?si=uqOHLh2ZO19oOwju">Урок 14 ( css анимации )............................</a>
+									<a href="https://www.youtube.com/embed/lzVqtLkmpO0?si=YP0fVH3fqjl3C9F7">Урок 15 ( Модулб FLEX )....................</a>
+									<a href="https://www.youtube.com/embed/SbNBSQBj4DQ?si=8pyQE6uGq9IzleqK">Урок 16 ( HTML - форми )........</a>
+									<a href="https://www.youtube.com/embed/0FvcP5Z8D08?si=YYrCzd1UwFx9mH1Z">Урок 17 ( Адаптивна верстка )............................</a>
+									<a href="https://www.youtube.com/embed/VJZWLEBTvjI?si=N2zD6IB4YrjTAh82">Урок 18 ( Практика закриплення материалу )</a>
+									<a href="https://www.youtube.com/embed/L2hzKBhmlq0?si=QC3o4_BYd2nM3UCB">Урок 19 ( Модуль - GRID )........</a>
+									<a href="https://www.youtube.com/embed/GBaH5rIltWY?si=rznzitQjVsfyIaFo">Урок 20 ( Препроцесор SASS/SCSS )............................</a>
+									<a href="https://www.youtube.com/embed/oOCokURDhdw?si=EAsLipyK_5QlLgF7">Урок 21 ( Суперсила SASS/SCSS, Семантика та доступнисть )</a>
+									<a href="https://www.youtube.com/embed/A7EWddQ9BBI?si=vNUi1KTG987Sw1Q1">Урок 22 ( Видносни одиници та инши корисни CSS можливости )</a>
+									<hr>
+									<a href="https://www.youtube.com/embed/oKiIu0V01zk?si=uLGpl2sXtLVYVIuB">Урок 23 ( JavaScript. Частина 1 )..........</a>
+									<a href="https://www.youtube.com/embed/GTHRcZ2FDiE?si=pnqkqH7FHORRZkzq">Урок 24 ( JavaScript. Частина 2 )..........</a>
+									<a href="https://www.youtube.com/embed/vh0avFlIkEo?si=_jG0O4x7DAASLD7P">Урок 25 ( JavaScript. Частина 3 )..........</a>
+									<a href="https://www.youtube.com/embed/KEPpwEldyzQ?si=bnyrJrlCbwzD5cP7">Урок 26 ( JavaScript. Частина 4 )..................</a>
+									<hr>
+									<a href="https://www.youtube.com/embed/HzzImb20RUA?si=6ri4e7rTq9b-Obbf">Урок 27 ( Практика. Частина 1 )..............</a>
+									<a href="https://www.youtube.com/embed/x7pXa8Q2twI?si=HnWwhwZkQzgYpdKN">Урок 28 ( Практика. Частина 2 )</a>
+									<a href="https://www.youtube.com/embed/W5-H_P_J9Yw?si=cMW12rWRNIq9ytBl">Урок 29 ( Практика. Частина 3 )..................</a>
+									<a href="https://www.youtube.com/embed/nxC7SDPSxVM?si=rNdDA0ZzHz6qqBX9">Урок 30 ( Практика. Частина 4 )..............</a>
+									<a href="https://www.youtube.com/embed/YJlYDYhl3aw?si=DDzuixk_Wh5s5gi5">Урок 31 ( Практика. Частина 5 )</a>
+									<a href="https://www.youtube.com/embed/vn4l9-7p0Tg?si=m35BznUQxo41TxX6">Урок 32 ( Практика. Частина 6 )..................</a>
+									<a href="https://www.youtube.com/embed/dOYhLDjaQGs?si=9xlL_CTV3Sbbgbcw">Урок 33 ( Практика. Частина 7 )..............</a>
+									<a href="https://www.youtube.com/embed/SEa30flsEI0?si=x-7gj0ZnAq7ZyafI">Урок 34 ( Практика. Частина 8 )</a>
+									<a href="https://www.youtube.com/embed/uVJ8AuO18rQ?si=tTXDrzAFC795-8W9">Урок 35 ( Практика. Частина 9 )..................</a>
+									<a href="https://www.youtube.com/embed/Pbkt-awZivg?si=efsyRzn2NwaaLH7U">Урок 36 ( Практика. Частина 10 )..............</a>
+								</div>
+
+							</div>
+
+						</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="../js/app.js"></script>
+	<!-- <script src="js/app.min.js?_v=20241216071557"></script>
+	<script src="js/1.js?_v=20241216071557"></script>
+	<script src="js/2.js?_v=20241216071557"></script>
+	<script src="js/3.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js?_v=20241216071557"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js?_v=20241216071557"></script> -->
+</body>
+
+</html>
