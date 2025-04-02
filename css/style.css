@@ -970,7 +970,7 @@ hr {
 @media (max-width:412px) {
 	.catalog__items {
 		gap: 2.8125rem;
-		margin-left: 27px
+		margin-left: -25px
 	}
 
 	.code {
